@@ -2,7 +2,7 @@
   "name": "edrt",
   "productName": "edrt",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "Text editor with persistence",
   "main": ".webpack/main",
   "scripts": {
     "start": "electron-forge start",
