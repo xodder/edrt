@@ -14,20 +14,24 @@ const config: ForgeConfig = {
   makers: [new MakerSquirrel({}), new MakerZIP({}, ['darwin']), new MakerRpm({}), new MakerDeb({})],
   plugins: [
     new WebpackPlugin({
+      devServer: {
+        liveReload: false,
+      },
       mainConfig,
       renderer: {
         config: rendererConfig,
         entryPoints: [
           {
-            html: './src/index.html',
-            js: './src/renderer.ts',
             name: 'main_window',
+            html: './src/renderer/index.html',
+            js: './src/renderer/index.ts',
             preload: {
-              js: './src/preload.ts',
+              js: './src/renderer/preload.ts',
             },
           },
         ],
       },
+      loggerPort: 9001,
     }),
   ],
 };
