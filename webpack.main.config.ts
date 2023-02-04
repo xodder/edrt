@@ -20,8 +20,5 @@ export const mainConfig: Configuration = {
   },
   plugins: [
     plugins[0], // DotEnv
-  ],
-  watchOptions: {
-    ignored: /node_modules/,
-  }
+  ]
 };

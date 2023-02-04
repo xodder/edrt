@@ -22,10 +22,18 @@ export const rules: Required<ModuleOptions>['rules'] = [
     test: /\.tsx?$/,
     exclude: /(node_modules|\.webpack)/,
     use: {
-      loader: 'ts-loader',
+      loader: 'swc-loader',
       options: {
-        transpileOnly: true,
-      },
-    },
+        jsc: {
+          target: "es2020",
+          transform: {
+            react: {
+              development: process.env.NODE_ENV !== 'production',
+              refresh: process.env.NODE_ENV !== 'production',
+            }
+          }
+        },
+      }
+    }
   },
 ];
