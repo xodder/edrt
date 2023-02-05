@@ -13,8 +13,7 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "paths": {
-      "~/main": ["./src/main"],
-      "~/renderer": ["./src/renderer"],
+      "~/*": ["src/*"],
     }
   },
   "include": ["src/**/*"]

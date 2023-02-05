@@ -1,13 +1,14 @@
+import { CssBaseline, ThemeProvider, Button } from '@mui/material';
 import React from 'react';
+import Screens from './screens';
+import theme from './theme';
 
 function App() {
   return (
-    <div>
-      <span>
-        Some label here
-      </span>
-      <p>Rendering from React</p>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline enableColorScheme />
+      <Screens />
+    </ThemeProvider>
   );
 }
 

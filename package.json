@@ -18,7 +18,12 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@fontsource/roboto": "^4.5.8",
+    "@mui/material": "^5.11.7",
     "electron-squirrel-startup": "^1.0.0",
+    "mdi-material-ui": "^7.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
