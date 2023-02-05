@@ -17,9 +17,8 @@ const createWindow = (): void => {
   mainWindow = new BrowserWindow({
     height: 600,
     width: 800,
-    // titleBarStyle: 'hiddenInset',
-    // vibrancy: 'menu',
-    // transparent: true,
+    titleBarStyle: 'hidden',
+    trafficLightPosition: { x: 15, y: 15 },
     webPreferences: {
       preload: MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY,
     },
