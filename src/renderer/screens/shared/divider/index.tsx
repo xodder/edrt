@@ -22,6 +22,7 @@ function Divider({
       borderTop={!vertical ? `${weight}px ${type}` : undefined}
       borderLeft={vertical ? `${weight}px ${type}` : undefined}
       borderColor={color}
+      bgcolor={color}
     />
   );
 }

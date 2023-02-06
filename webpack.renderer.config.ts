@@ -51,5 +51,5 @@ export const rendererConfig: Configuration = {
   },
   watchOptions: {
     ignored: /node_modules/,
-  }
+  },
 };

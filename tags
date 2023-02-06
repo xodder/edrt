@@ -10,6 +10,9 @@
 !_TAG_FIELD_DESCRIPTION	typeref	/Type and name of a variable or typedef/
 !_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
 !_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_KIND_DESCRIPTION!CSS	c,class	/classes/
+!_TAG_KIND_DESCRIPTION!CSS	i,id	/identities/
+!_TAG_KIND_DESCRIPTION!CSS	s,selector	/selectors/
 !_TAG_KIND_DESCRIPTION!HTML	C,stylesheet	/stylesheets/
 !_TAG_KIND_DESCRIPTION!HTML	I,id	/identifiers/
 !_TAG_KIND_DESCRIPTION!HTML	J,script	/scripts/
@@ -52,6 +55,7 @@
 !_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
 !_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
 !_TAG_OUTPUT_VERSION	0.0	/current.age/
+!_TAG_PARSER_VERSION!CSS	0.0	/current.age/
 !_TAG_PARSER_VERSION!HTML	0.0	/current.age/
 !_TAG_PARSER_VERSION!JSON	0.0	/current.age/
 !_TAG_PARSER_VERSION!JavaScript	0.0	/current.age/
@@ -87,6 +91,11 @@
 ./node_modules/.pnpm/@emotion+use-insertion-effect-with-fallbacks@1.0.0_react@18.2.0/node_modules/@emotion/use-insertion-effect-with-fallbacks/dist/emotion-use-insertion-effect-with-fallbacks.browser.esm.js	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/node_modules\/.pnpm\/@emotion+use-insertion-effect-with-fallbacks@1.0.0_react@18.2.0/;"	p	variable:__webpack_modules__
 ./node_modules/.pnpm/@emotion+utils@1.2.0/node_modules/@emotion/utils/dist/emotion-utils.browser.esm.js	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/node_modules\/.pnpm\/@emotion+utils@1.2.0\/node_modules\/@emotion\/utils\/dist\/emot/;"	p	variable:__webpack_modules__
 ./node_modules/.pnpm/@emotion+weak-memoize@0.3.0/node_modules/@emotion/weak-memoize/dist/emotion-weak-memoize.esm.js	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/node_modules\/.pnpm\/@emotion+weak-memoize@0.3.0\/node_modules\/@emotion\/weak-memoi/;"	p	variable:__webpack_modules__
+./node_modules/.pnpm/@fontsource+roboto@4.5.8/node_modules/@fontsource/roboto/300.css	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/node_modules\/.pnpm\/@fontsource+roboto@4.5.8\/node_modules\/@fontsource\/roboto\/30/;"	p	variable:__webpack_modules__
+./node_modules/.pnpm/@fontsource+roboto@4.5.8/node_modules/@fontsource/roboto/400.css	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/node_modules\/.pnpm\/@fontsource+roboto@4.5.8\/node_modules\/@fontsource\/roboto\/40/;"	p	variable:__webpack_modules__
+./node_modules/.pnpm/@fontsource+roboto@4.5.8/node_modules/@fontsource/roboto/500.css	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/node_modules\/.pnpm\/@fontsource+roboto@4.5.8\/node_modules\/@fontsource\/roboto\/50/;"	p	variable:__webpack_modules__
+./node_modules/.pnpm/@fontsource+roboto@4.5.8/node_modules/@fontsource/roboto/700.css	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/node_modules\/.pnpm\/@fontsource+roboto@4.5.8\/node_modules\/@fontsource\/roboto\/70/;"	p	variable:__webpack_modules__
+./node_modules/.pnpm/@fontsource+roboto@4.5.8/node_modules/@fontsource/roboto/900.css	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/node_modules\/.pnpm\/@fontsource+roboto@4.5.8\/node_modules\/@fontsource\/roboto\/90/;"	p	variable:__webpack_modules__
 ./node_modules/.pnpm/@mui+material@5.11.7_rqh7qj4464ntrqrt6banhaqg4q/node_modules/@mui/material/Box/Box.js	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/node_modules\/.pnpm\/@mui+material@5.11.7_rqh7qj4464ntrqrt6banhaqg4q\/node_modules\//;"	p	variable:__webpack_modules__
 ./node_modules/.pnpm/@mui+material@5.11.7_rqh7qj4464ntrqrt6banhaqg4q/node_modules/@mui/material/Button/Button.js	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/node_modules\/.pnpm\/@mui+material@5.11.7_rqh7qj4464ntrqrt6banhaqg4q\/node_modules\//;"	p	variable:__webpack_modules__
 ./node_modules/.pnpm/@mui+material@5.11.7_rqh7qj4464ntrqrt6banhaqg4q/node_modules/@mui/material/Button/buttonClasses.js	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/node_modules\/.pnpm\/@mui+material@5.11.7_rqh7qj4464ntrqrt6banhaqg4q\/node_modules\//;"	p	variable:__webpack_modules__
@@ -99,6 +108,8 @@
 ./node_modules/.pnpm/@mui+material@5.11.7_rqh7qj4464ntrqrt6banhaqg4q/node_modules/@mui/material/CssBaseline/CssBaseline.js	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/node_modules\/.pnpm\/@mui+material@5.11.7_rqh7qj4464ntrqrt6banhaqg4q\/node_modules\//;"	p	variable:__webpack_modules__
 ./node_modules/.pnpm/@mui+material@5.11.7_rqh7qj4464ntrqrt6banhaqg4q/node_modules/@mui/material/GlobalStyles/GlobalStyles.js	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/node_modules\/.pnpm\/@mui+material@5.11.7_rqh7qj4464ntrqrt6banhaqg4q\/node_modules\//;"	p	variable:__webpack_modules__
 ./node_modules/.pnpm/@mui+material@5.11.7_rqh7qj4464ntrqrt6banhaqg4q/node_modules/@mui/material/Stack/Stack.js	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/node_modules\/.pnpm\/@mui+material@5.11.7_rqh7qj4464ntrqrt6banhaqg4q\/node_modules\//;"	p	variable:__webpack_modules__
+./node_modules/.pnpm/@mui+material@5.11.7_rqh7qj4464ntrqrt6banhaqg4q/node_modules/@mui/material/Typography/Typography.js	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/node_modules\/.pnpm\/@mui+material@5.11.7_rqh7qj4464ntrqrt6banhaqg4q\/node_modules\//;"	p	variable:__webpack_modules__
+./node_modules/.pnpm/@mui+material@5.11.7_rqh7qj4464ntrqrt6banhaqg4q/node_modules/@mui/material/Typography/typographyClasses.js	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/node_modules\/.pnpm\/@mui+material@5.11.7_rqh7qj4464ntrqrt6banhaqg4q\/node_modules\//;"	p	variable:__webpack_modules__
 ./node_modules/.pnpm/@mui+material@5.11.7_rqh7qj4464ntrqrt6banhaqg4q/node_modules/@mui/material/colors/blue.js	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/node_modules\/.pnpm\/@mui+material@5.11.7_rqh7qj4464ntrqrt6banhaqg4q\/node_modules\//;"	p	variable:__webpack_modules__
 ./node_modules/.pnpm/@mui+material@5.11.7_rqh7qj4464ntrqrt6banhaqg4q/node_modules/@mui/material/colors/common.js	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/node_modules\/.pnpm\/@mui+material@5.11.7_rqh7qj4464ntrqrt6banhaqg4q\/node_modules\//;"	p	variable:__webpack_modules__
 ./node_modules/.pnpm/@mui+material@5.11.7_rqh7qj4464ntrqrt6banhaqg4q/node_modules/@mui/material/colors/green.js	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/node_modules\/.pnpm\/@mui+material@5.11.7_rqh7qj4464ntrqrt6banhaqg4q\/node_modules\//;"	p	variable:__webpack_modules__
@@ -115,6 +126,7 @@
 ./node_modules/.pnpm/@mui+material@5.11.7_rqh7qj4464ntrqrt6banhaqg4q/node_modules/@mui/material/styles/defaultTheme.js	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/node_modules\/.pnpm\/@mui+material@5.11.7_rqh7qj4464ntrqrt6banhaqg4q\/node_modules\//;"	p	variable:__webpack_modules__
 ./node_modules/.pnpm/@mui+material@5.11.7_rqh7qj4464ntrqrt6banhaqg4q/node_modules/@mui/material/styles/shadows.js	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/node_modules\/.pnpm\/@mui+material@5.11.7_rqh7qj4464ntrqrt6banhaqg4q\/node_modules\//;"	p	variable:__webpack_modules__
 ./node_modules/.pnpm/@mui+material@5.11.7_rqh7qj4464ntrqrt6banhaqg4q/node_modules/@mui/material/styles/styled.js	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/node_modules\/.pnpm\/@mui+material@5.11.7_rqh7qj4464ntrqrt6banhaqg4q\/node_modules\//;"	p	variable:__webpack_modules__
+./node_modules/.pnpm/@mui+material@5.11.7_rqh7qj4464ntrqrt6banhaqg4q/node_modules/@mui/material/styles/useTheme.js	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/node_modules\/.pnpm\/@mui+material@5.11.7_rqh7qj4464ntrqrt6banhaqg4q\/node_modules\//;"	p	variable:__webpack_modules__
 ./node_modules/.pnpm/@mui+material@5.11.7_rqh7qj4464ntrqrt6banhaqg4q/node_modules/@mui/material/styles/useThemeProps.js	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/node_modules\/.pnpm\/@mui+material@5.11.7_rqh7qj4464ntrqrt6banhaqg4q\/node_modules\//;"	p	variable:__webpack_modules__
 ./node_modules/.pnpm/@mui+material@5.11.7_rqh7qj4464ntrqrt6banhaqg4q/node_modules/@mui/material/styles/zIndex.js	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/node_modules\/.pnpm\/@mui+material@5.11.7_rqh7qj4464ntrqrt6banhaqg4q\/node_modules\//;"	p	variable:__webpack_modules__
 ./node_modules/.pnpm/@mui+material@5.11.7_rqh7qj4464ntrqrt6banhaqg4q/node_modules/@mui/material/utils/capitalize.js	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/node_modules\/.pnpm\/@mui+material@5.11.7_rqh7qj4464ntrqrt6banhaqg4q\/node_modules\//;"	p	variable:__webpack_modules__
@@ -476,6 +488,8 @@
 ./node_modules/.pnpm/html-entities@2.3.3/node_modules/html-entities/lib/numeric-unicode-map.js	.webpack/renderer/main_window/preload.js	/^\/***\/ ".\/node_modules\/.pnpm\/html-entities@2.3.3\/node_modules\/html-entities\/lib\/numeric-/;"	p	variable:__webpack_modules__
 ./node_modules/.pnpm/html-entities@2.3.3/node_modules/html-entities/lib/surrogate-pairs.js	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/node_modules\/.pnpm\/html-entities@2.3.3\/node_modules\/html-entities\/lib\/surrogat/;"	p	variable:__webpack_modules__
 ./node_modules/.pnpm/html-entities@2.3.3/node_modules/html-entities/lib/surrogate-pairs.js	.webpack/renderer/main_window/preload.js	/^\/***\/ ".\/node_modules\/.pnpm\/html-entities@2.3.3\/node_modules\/html-entities\/lib\/surrogat/;"	p	variable:__webpack_modules__
+./node_modules/.pnpm/mini-css-extract-plugin@2.7.2_webpack@5.75.0/node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/node_modules\/.pnpm\/mini-css-extract-plugin@2.7.2_webpack@5.75.0\/node_modules\/min/;"	p	variable:__webpack_modules__
+./node_modules/.pnpm/mini-css-extract-plugin@2.7.2_webpack@5.75.0/node_modules/mini-css-extract-plugin/dist/hmr/normalize-url.js	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/node_modules\/.pnpm\/mini-css-extract-plugin@2.7.2_webpack@5.75.0\/node_modules\/min/;"	p	variable:__webpack_modules__
 ./node_modules/.pnpm/ms@2.0.0/node_modules/ms/index.js	.webpack/main/index.js	/^\/***\/ ".\/node_modules\/.pnpm\/ms@2.0.0\/node_modules\/ms\/index.js":$/;"	p	variable:__webpack_modules__
 ./node_modules/.pnpm/object-assign@4.1.1/node_modules/object-assign/index.js	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/node_modules\/.pnpm\/object-assign@4.1.1\/node_modules\/object-assign\/index.js":$/;"	p	variable:__webpack_modules__
 ./node_modules/.pnpm/prop-types@15.8.1/node_modules/prop-types/checkPropTypes.js	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/node_modules\/.pnpm\/prop-types@15.8.1\/node_modules\/prop-types\/checkPropTypes.js"/;"	p	variable:__webpack_modules__
@@ -533,117 +547,114 @@
 ./src/renderer/screens/index.tsx	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/src\/renderer\/screens\/index.tsx":$/;"	p	variable:__webpack_modules__
 ./src/renderer/screens/main/index.tsx	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/src\/renderer\/screens\/main\/index.tsx":$/;"	p	variable:__webpack_modules__
 ./src/renderer/screens/shared/layout/center/index.tsx	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/src\/renderer\/screens\/shared\/layout\/center\/index.tsx":$/;"	p	variable:__webpack_modules__
+./src/renderer/screens/shared/layout/column/index.tsx	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/src\/renderer\/screens\/shared\/layout\/column\/index.tsx":$/;"	p	variable:__webpack_modules__
 ./src/renderer/screens/shared/layout/flex-item/index.tsx	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/src\/renderer\/screens\/shared\/layout\/flex-item\/index.tsx":$/;"	p	variable:__webpack_modules__
+./src/renderer/screens/shared/layout/flexible/index.tsx	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/src\/renderer\/screens\/shared\/layout\/flexible\/index.tsx":$/;"	p	variable:__webpack_modules__
+./src/renderer/screens/shared/layout/index.tsx	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/src\/renderer\/screens\/shared\/layout\/index.tsx":$/;"	p	variable:__webpack_modules__
+./src/renderer/screens/shared/layout/row/index.tsx	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/src\/renderer\/screens\/shared\/layout\/row\/index.tsx":$/;"	p	variable:__webpack_modules__
+./src/renderer/screens/shared/layout/spacer/index.tsx	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/src\/renderer\/screens\/shared\/layout\/spacer\/index.tsx":$/;"	p	variable:__webpack_modules__
 ./src/renderer/theme/index.ts	.webpack/renderer/main_window/index.js	/^\/***\/ ".\/src\/renderer\/theme\/index.ts":$/;"	p	variable:__webpack_modules__
 0	.eslintrc.json	/^    "eslint:recommended",$/;"	s	array:extends
-0	.webpack/renderer/main_window.005161a6358c2347a310.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
-0	.webpack/renderer/main_window.19606476ed98423f93ef.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
-0	.webpack/renderer/main_window.1d61d7f9472fcc58e4f9.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
-0	.webpack/renderer/main_window.303fe97aca50623de173.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
-0	.webpack/renderer/main_window.332d00f563baab3b15a5.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
-0	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:c
-0	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-0	.webpack/renderer/main_window.55ecc4292b715d09f322.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
-0	.webpack/renderer/main_window.6934b87c0fbd9b1cc2f1.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
-0	.webpack/renderer/main_window.6965f5c44f63c6d72f4f.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
-0	.webpack/renderer/main_window.6e6a6e9555687e92d066.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
-0	.webpack/renderer/main_window.7a259bb6ea032f0bde11.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
-0	.webpack/renderer/main_window.823857b07be9c2bda0db.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
-0	.webpack/renderer/main_window.85fdc7995d46279f693d.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
-0	.webpack/renderer/main_window.9bacfe13c347bf72cdc9.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
-0	.webpack/renderer/main_window.a1c82de54ca071b49cea.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
-0	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:c
-0	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-0	.webpack/renderer/main_window.b928d17629c706aded78.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
-0	.webpack/renderer/main_window.b974377e35453bd13a62.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
-0	.webpack/renderer/main_window.ba7188ea1d9e95a7864e.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
-0	.webpack/renderer/main_window.e6945ac8175d99044d2a.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
-0	.webpack/renderer/main_window.eff2b157e570c6f6fed3.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.0173da1ffca6012127fa.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.0551150b1280dfbdc20a.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.17e3ee6c6236286f8ed6.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.1d665a2802a3df1efbfe.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.2d696333d0d54f8cc649.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.2e4342b1d4bce8a69d51.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.38bcc0ebe81903d59b14.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.3989c02e98e9f1ed68ee.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.3cf2926172c67303ff08.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.428fe38c56a2e183d929.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.550cf912f85f677ef27e.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.55b71cc03ec0594e19bf.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.59c4cfdcfa6845446e29.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.6a712fb82c4912e65cb7.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.7634dfeeec55da3f5e4c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:c
+0	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+0	.webpack/renderer/main_window.79eb97b2b88cf08d4a6d.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.7b481e12967eb0d3ba53.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.7d137ee7f30cffa8e52b.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.7d4c945c26522c06e2e6.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.8bc701bdc9b8be4fe590.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.92d91a8d8106c2a06bf1.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.9a803c8511c637bcb0df.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.a0662c5e24f319252d2b.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.a2310c5f244497df0335.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.a2744bb700c063ee7f1c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.af36b72f291677480c5b.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.baba687623b2ba68c4a5.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.bded7a8ced4bd2b7c7c5.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.bfe5fcb12866b8c88070.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.c43af66ef56b40f2eab0.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.c646918180f6442dafb5.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.d186514cf944cc879a3a.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.d258e25194733172ac78.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.db5bedf0941323a8cae9.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.e770636a81102043378f.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.ed7e08d7bdb8a5e4931a.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.fadebd9cabe12eeacaf1.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
+0	.webpack/renderer/main_window.fdd402993190d4f0bbc2.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	s	array:c
 0	tsconfig.json	/^      "~\/*": ["src\/*"],$/;"	s	array:compilerOptions.paths.~/*
 0	tsconfig.json	/^  "include": ["src\/**\/*"]$/;"	s	array:include
 1	.eslintrc.json	/^    "plugin:@typescript-eslint\/eslint-recommended",$/;"	s	array:extends
-1	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-1	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-10	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-10	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-11	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-11	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-12	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-12	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-13	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-13	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-14	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-14	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-15	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-15	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-16	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-16	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-17	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-17	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-18	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-18	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-19	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-19	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+1	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+10	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+11	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+12	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+13	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+14	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+15	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+16	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+17	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+18	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+19	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
 2	.eslintrc.json	/^    "plugin:@typescript-eslint\/recommended",$/;"	s	array:extends
-2	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-2	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-20	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-20	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-21	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-21	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-22	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-22	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-23	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-23	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-24	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-24	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-25	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-25	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-26	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-26	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-27	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-27	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-28	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-28	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-29	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-29	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+2	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+20	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+21	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+22	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+23	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+24	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+25	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+26	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+27	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+28	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+29	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
 3	.eslintrc.json	/^    "plugin:import\/recommended",$/;"	s	array:extends
-3	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-3	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-30	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-30	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-31	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-31	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-32	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-32	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-33	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-33	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-34	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-34	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-35	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-35	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-36	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-36	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-37	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-37	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-38	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-38	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-39	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-39	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+3	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+30	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+31	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+32	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+33	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+34	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+35	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+36	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+37	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+38	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+39	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
 4	.eslintrc.json	/^    "plugin:import\/electron",$/;"	s	array:extends
-4	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-4	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+4	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+40	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+41	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+42	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+43	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+44	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+45	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+46	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+47	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+48	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+49	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
 5	.eslintrc.json	/^    "plugin:import\/typescript"$/;"	s	array:extends
-5	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-5	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-6	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-6	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-7	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-7	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-8	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-8	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-9	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
-9	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+5	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+50	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+51	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+52	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+53	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+6	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+7	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+8	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
+9	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	s	array:m
 @electron-forge/cli	package.json	/^    "@electron-forge\/cli": "^6.0.4",$/;"	s	object:devDependencies
 @electron-forge/maker-deb	package.json	/^    "@electron-forge\/maker-deb": "^6.0.4",$/;"	s	object:devDependencies
 @electron-forge/maker-rpm	package.json	/^    "@electron-forge\/maker-rpm": "^6.0.4",$/;"	s	object:devDependencies
@@ -700,17 +711,31 @@ addAllToSet	.webpack/renderer/main_window/index.js	/^\/******\/ 			function addA
 addDisposeHandler	.webpack/renderer/main_window/index.js	/^\/******\/ 				addDisposeHandler: function (callback) {$/;"	m	variable:createModuleHotObject.hot
 addStatusHandler	.webpack/renderer/main_window/index.js	/^\/******\/ 				addStatusHandler: function (l) {$/;"	m	variable:createModuleHotObject.hot
 allowJs	tsconfig.json	/^    "allowJs": true,$/;"	b	object:compilerOptions
-anonymousFunction1db4fc040100	.webpack/renderer/main_window.ba7188ea1d9e95a7864e.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
-anonymousFunction26f579b20100	.webpack/renderer/main_window.b928d17629c706aded78.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
-anonymousFunction437ddf840100	.webpack/renderer/main_window.6934b87c0fbd9b1cc2f1.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
-anonymousFunction4456f5b20100	.webpack/renderer/main_window.55ecc4292b715d09f322.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
-anonymousFunction470cb7010100	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
-anonymousFunction4c4c9dfe0100	.webpack/renderer/main_window.e6945ac8175d99044d2a.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
-anonymousFunction59c239da0100	.webpack/renderer/main_window.19606476ed98423f93ef.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
-anonymousFunction654db3280100	.webpack/renderer/main_window.a1c82de54ca071b49cea.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
-anonymousFunction682ec9e60100	.webpack/renderer/main_window.b974377e35453bd13a62.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
-anonymousFunction6f836b7d0100	.webpack/renderer/main_window.6e6a6e9555687e92d066.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
-anonymousFunction88b3b2dd0100	.webpack/renderer/main_window.303fe97aca50623de173.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunction030a2b1a0100	.webpack/renderer/main_window.d258e25194733172ac78.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunction08a80f860100	.webpack/renderer/main_window.3cf2926172c67303ff08.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunction117ba6110100	.webpack/renderer/main_window.55b71cc03ec0594e19bf.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunction186d69700100	.webpack/renderer/main_window.db5bedf0941323a8cae9.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunction207acd940100	.webpack/renderer/main_window.17e3ee6c6236286f8ed6.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunction222a8a3d0100	.webpack/renderer/main_window.92d91a8d8106c2a06bf1.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunction22f4c5d10100	.webpack/renderer/main_window.3989c02e98e9f1ed68ee.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunction274822a40100	.webpack/renderer/main_window.59c4cfdcfa6845446e29.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunction2a35e3bb0100	.webpack/renderer/main_window.baba687623b2ba68c4a5.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunction2b9f9c9b0100	.webpack/renderer/main_window.bfe5fcb12866b8c88070.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunction2f7ee4290100	.webpack/renderer/main_window.a0662c5e24f319252d2b.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunction42f0f2410100	.webpack/renderer/main_window.e770636a81102043378f.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunction52b09cd60100	.webpack/renderer/main_window.7d4c945c26522c06e2e6.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunction5520a0580100	.webpack/renderer/main_window.8bc701bdc9b8be4fe590.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunction6196ecec0100	.webpack/renderer/main_window.c43af66ef56b40f2eab0.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunction62346be10100	.webpack/renderer/main_window.428fe38c56a2e183d929.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunction6353e30d0100	.webpack/renderer/main_window.d186514cf944cc879a3a.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunction6e60227b0100	.webpack/renderer/main_window.a2310c5f244497df0335.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunction762e5f670100	.webpack/renderer/main_window.0551150b1280dfbdc20a.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunction79eb363a0100	.webpack/renderer/main_window.af36b72f291677480c5b.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunction7cd32a900100	.webpack/renderer/main_window.38bcc0ebe81903d59b14.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunction7e3907f70100	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunction7eaf27d40100	.webpack/renderer/main_window.79eb97b2b88cf08d4a6d.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunction868b21ae0100	.webpack/renderer/main_window.2e4342b1d4bce8a69d51.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunction8e52c7590100	.webpack/renderer/main_window.7d137ee7f30cffa8e52b.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
 anonymousFunction91d85ad60200	.webpack/main/index.js	/^  args[0].replace(\/%[a-zA-Z%]\/g, function(match) {$/;"	f
 anonymousFunction91d85ad60300	.webpack/main/index.js	/^    args[0] = args[0].replace(\/%([a-zA-Z%])\/g, function(match, format) {$/;"	f	function:__webpack_modules__.createDebug.debug
 anonymousFunction91d85ad60400	.webpack/main/index.js	/^exports.inspectOpts = Object.keys(process.env).filter(function (key) {$/;"	f
@@ -718,12 +743,14 @@ anonymousFunction91d85ad60500	.webpack/main/index.js	/^}).reduce(function (obj, 
 anonymousFunction91d85ad60600	.webpack/main/index.js	/^    .replace(\/_([a-z])\/g, function (_, k) { return k.toUpperCase() });$/;"	f	function:anonymousFunction91d85ad60500
 anonymousFunction91d85ad60800	.webpack/main/index.js	/^  util.deprecate(function(){}, 'except for stderr(2) and stdout(1), any other usage of DEBUG_FD /;"	f
 anonymousFunction91d85ad60a00	.webpack/main/index.js	/^    .split('\\n').map(function(str) {$/;"	f
-anonymousFunction94f304ae0100	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
-anonymousFunction954c165f0100	.webpack/renderer/main_window.823857b07be9c2bda0db.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
-anonymousFunction958d08930100	.webpack/renderer/main_window.7a259bb6ea032f0bde11.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
-anonymousFunctiona0a7fbc70100	.webpack/renderer/main_window.1d61d7f9472fcc58e4f9.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
-anonymousFunctiona9b1627d0100	.webpack/renderer/main_window.eff2b157e570c6f6fed3.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
-anonymousFunctionb3e7dad80100	.webpack/renderer/main_window.6965f5c44f63c6d72f4f.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunction950289580100	.webpack/renderer/main_window.ed7e08d7bdb8a5e4931a.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunction95daf7050100	.webpack/renderer/main_window.6a712fb82c4912e65cb7.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunction9d9e1a7e0100	.webpack/renderer/main_window.0173da1ffca6012127fa.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunctiona10bc10d0100	.webpack/renderer/main_window.1d665a2802a3df1efbfe.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunctiona18297790100	.webpack/renderer/main_window.c646918180f6442dafb5.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunctiona41888c60100	.webpack/renderer/main_window.fadebd9cabe12eeacaf1.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunctionab85d9a70100	.webpack/renderer/main_window.a2744bb700c063ee7f1c.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunctionb2bb36050100	.webpack/renderer/main_window.bded7a8ced4bd2b7c7c5.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
 anonymousFunctionb75d26f30100	.webpack/renderer/main_window/index.js	/^\/***\/ (function(module, __unused_webpack_exports, __webpack_require__) {$/;"	f	variable:__webpack_modules__
 anonymousFunctionb75d26f30200	.webpack/renderer/main_window/index.js	/^\/***\/ (function(__unused_webpack_module, exports, __webpack_require__) {$/;"	f	variable:__webpack_modules__
 anonymousFunctionb75d26f30300	.webpack/renderer/main_window/index.js	/^\/***\/ (function(module) {$/;"	f	variable:__webpack_modules__
@@ -762,14 +789,16 @@ anonymousFunctionb75d26f33200	.webpack/renderer/main_window/index.js	/^\/******\
 anonymousFunctionb75d26f33300	.webpack/renderer/main_window/index.js	/^\/******\/ 				apply: function (reportError) {$/;"	f	function:applyHandler
 anonymousFunctionb75d26f33b00	.webpack/renderer/main_window/index.js	/^\/******\/ 			currentUpdate = removedModules.reduce(function (obj, key) {$/;"	f	function:__webpack_require__.hmrC.jsonp
 anonymousFunctionb75d26f33d00	.webpack/renderer/main_window/index.js	/^\/******\/ 			chunkIds.forEach(function (chunkId) {$/;"	f
-anonymousFunctionc0dcfee60100	.webpack/renderer/main_window.9bacfe13c347bf72cdc9.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
-anonymousFunctiond13a7d3a0100	.webpack/renderer/main_window.332d00f563baab3b15a5.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
-anonymousFunctione57b814f0100	.webpack/renderer/main_window.005161a6358c2347a310.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunctionb7a56d000100	.webpack/renderer/main_window.7b481e12967eb0d3ba53.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunctionc3e425b80100	.webpack/renderer/main_window.550cf912f85f677ef27e.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunctionc7fd0fec0100	.webpack/renderer/main_window.7634dfeeec55da3f5e4c.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunctiond98433ad0100	.webpack/renderer/main_window.fdd402993190d4f0bbc2.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
 anonymousFunctione72ffc220100	.webpack/renderer/main_window/preload.js	/^\/***\/ (function(module, __unused_webpack_exports, __webpack_require__) {$/;"	f	variable:__webpack_modules__
 anonymousFunctione72ffc220200	.webpack/renderer/main_window/preload.js	/^\/***\/ (function(__unused_webpack_module, exports, __webpack_require__) {$/;"	f	variable:__webpack_modules__
 anonymousFunctione72ffc220300	.webpack/renderer/main_window/preload.js	/^\/***\/ (function(module) {$/;"	f	variable:__webpack_modules__
 anonymousFunctione72ffc220400	.webpack/renderer/main_window/preload.js	/^\/******\/ 		__webpack_require__.i.forEach(function(handler) { handler(execOptions); });$/;"	f
-anonymousFunctionff20ba170100	.webpack/renderer/main_window.85fdc7995d46279f693d.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunctionf213611f0100	.webpack/renderer/main_window.2d696333d0d54f8cc649.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
+anonymousFunctionf62c8a8e0100	.webpack/renderer/main_window.9a803c8511c637bcb0df.hot-update.js	/^\/******\/ function(__webpack_require__) { \/\/ webpackRuntimeModules$/;"	f
 anonymousObject91d85ad60c05	.webpack/main/index.js	/^      stream = new fs.SyncWriteStream(fd, { autoClose: false });$/;"	v	function:__webpack_modules__.createWritableStdioStream
 anonymousObject91d85ad60d05	.webpack/main/index.js	/^      stream = new net.Socket({$/;"	v	function:__webpack_modules__.createWritableStdioStream
 anonymousObject91d85ad60f05	.webpack/main/index.js	/^  spawn(updateExe, args, {$/;"	v	function:__webpack_modules__.run
@@ -797,33 +826,54 @@ app	.webpack/main/index.js	/^var app = (__webpack_require__(\/*! electron *\/ "e
 apply	.webpack/renderer/main_window/index.js	/^\/******\/ 				apply: hotApply,$/;"	p	variable:createModuleHotObject.hot
 applyHandler	.webpack/renderer/main_window/index.js	/^\/******\/ 		var applyHandler = (options) => {$/;"	f
 applyInvalidatedModules	.webpack/renderer/main_window/index.js	/^\/******\/ 		function applyInvalidatedModules() {$/;"	f
+arrowParens	.prettierrc.json	/^  "arrowParens": "always",$/;"	s
 author	package.json	/^  "author": {$/;"	o
 autoClose	.webpack/main/index.js	/^      stream = new fs.SyncWriteStream(fd, { autoClose: false });$/;"	p	variable:__webpack_modules__.createWritableStdioStream.anonymousObject91d85ad60c05
 baseUrl	tsconfig.json	/^    "baseUrl": ".",$/;"	s	object:compilerOptions
 blockingPromises	.webpack/renderer/main_window/index.js	/^\/******\/ 		var blockingPromises = 0;$/;"	v
 blockingPromisesWaiting	.webpack/renderer/main_window/index.js	/^\/******\/ 		var blockingPromisesWaiting = [];$/;"	v
+bracketSameLine	.prettierrc.json	/^  "bracketSameLine": false,$/;"	b
+bracketSpacing	.prettierrc.json	/^  "bracketSpacing": true,$/;"	b
 browser	.eslintrc.json	/^    "browser": true,$/;"	b	object:env
-c	.webpack/renderer/main_window.005161a6358c2347a310.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-c	.webpack/renderer/main_window.19606476ed98423f93ef.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-c	.webpack/renderer/main_window.1d61d7f9472fcc58e4f9.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-c	.webpack/renderer/main_window.303fe97aca50623de173.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-c	.webpack/renderer/main_window.332d00f563baab3b15a5.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-c	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	a
-c	.webpack/renderer/main_window.55ecc4292b715d09f322.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-c	.webpack/renderer/main_window.6934b87c0fbd9b1cc2f1.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-c	.webpack/renderer/main_window.6965f5c44f63c6d72f4f.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-c	.webpack/renderer/main_window.6e6a6e9555687e92d066.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-c	.webpack/renderer/main_window.7a259bb6ea032f0bde11.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-c	.webpack/renderer/main_window.823857b07be9c2bda0db.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-c	.webpack/renderer/main_window.85fdc7995d46279f693d.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-c	.webpack/renderer/main_window.9bacfe13c347bf72cdc9.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-c	.webpack/renderer/main_window.a1c82de54ca071b49cea.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-c	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	a
-c	.webpack/renderer/main_window.b928d17629c706aded78.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-c	.webpack/renderer/main_window.b974377e35453bd13a62.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-c	.webpack/renderer/main_window.ba7188ea1d9e95a7864e.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-c	.webpack/renderer/main_window.e6945ac8175d99044d2a.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-c	.webpack/renderer/main_window.eff2b157e570c6f6fed3.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.0173da1ffca6012127fa.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.0551150b1280dfbdc20a.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.17e3ee6c6236286f8ed6.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.1d665a2802a3df1efbfe.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.2d696333d0d54f8cc649.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.2e4342b1d4bce8a69d51.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.38bcc0ebe81903d59b14.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.3989c02e98e9f1ed68ee.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.3cf2926172c67303ff08.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.428fe38c56a2e183d929.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.550cf912f85f677ef27e.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.55b71cc03ec0594e19bf.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.59c4cfdcfa6845446e29.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.6a712fb82c4912e65cb7.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.7634dfeeec55da3f5e4c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	a
+c	.webpack/renderer/main_window.79eb97b2b88cf08d4a6d.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.7b481e12967eb0d3ba53.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.7d137ee7f30cffa8e52b.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.7d4c945c26522c06e2e6.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.8bc701bdc9b8be4fe590.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.92d91a8d8106c2a06bf1.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.9a803c8511c637bcb0df.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.a0662c5e24f319252d2b.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.a2310c5f244497df0335.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.a2744bb700c063ee7f1c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.af36b72f291677480c5b.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.baba687623b2ba68c4a5.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.bded7a8ced4bd2b7c7c5.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.bfe5fcb12866b8c88070.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.c43af66ef56b40f2eab0.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.c646918180f6442dafb5.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.d186514cf944cc879a3a.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.d258e25194733172ac78.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.db5bedf0941323a8cae9.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.e770636a81102043378f.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.ed7e08d7bdb8a5e4931a.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.fadebd9cabe12eeacaf1.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+c	.webpack/renderer/main_window.fdd402993190d4f0bbc2.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
 chain	.webpack/renderer/main_window/index.js	/^\/******\/ 							chain: chain.concat([parentId]),$/;"	p	variable:anonymousObjectb75d26f32f05
 check	.webpack/main/index.js	/^var check = function() {$/;"	f	variable:__webpack_modules__
 check	.webpack/renderer/main_window/index.js	/^\/******\/ 				check: hotCheck,$/;"	p	variable:createModuleHotObject.hot
@@ -884,6 +934,7 @@ electron__WEBPACK_IMPORTED_MODULE_0___default	.webpack/main/index.js	/^\/* harmo
 email	package.json	/^    "email": "odebiyistephen@gmail.com"$/;"	s	object:author
 enable	.webpack/main/index.js	/^function enable(namespaces) {$/;"	f	variable:__webpack_modules__
 enabled	.webpack/main/index.js	/^function enabled(name) {$/;"	f	variable:__webpack_modules__
+endOfLine	.prettierrc.json	/^  "endOfLine": "auto"$/;"	s
 enumerable	.webpack/main/index.js	/^\/******\/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });$/;"	p	variable:anonymousObject91d85ad61305
 enumerable	.webpack/renderer/main_window/index.js	/^\/******\/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });$/;"	p	variable:anonymousObjectb75d26f30805
 enumerable	.webpack/renderer/main_window/preload.js	/^\/******\/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });$/;"	p	variable:anonymousObjecte72ffc220705
@@ -934,28 +985,46 @@ getter	.webpack/renderer/main_window/index.js	/^\/******\/ 			var getter = modul
 gotTheLock	.webpack/main/index.js	/^const gotTheLock = electron__WEBPACK_IMPORTED_MODULE_0__.app.requestSingleInstanceLock();$/;"	C
 gotTheLock	src/main/index.ts	/^const gotTheLock = app.requestSingleInstanceLock();$/;"	C
 h	.webpack/main/index.js	/^var h = m * 60;$/;"	v	variable:__webpack_modules__
-h	.webpack/renderer/main_window.005161a6358c2347a310.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("475f0c909f8ae58da406")$/;"	f	variable:__webpack_require__
-h	.webpack/renderer/main_window.19606476ed98423f93ef.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("303fe97aca50623de173")$/;"	f	variable:__webpack_require__
-h	.webpack/renderer/main_window.1d61d7f9472fcc58e4f9.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("332d00f563baab3b15a5")$/;"	f	variable:__webpack_require__
-h	.webpack/renderer/main_window.303fe97aca50623de173.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("a1c82de54ca071b49cea")$/;"	f	variable:__webpack_require__
-h	.webpack/renderer/main_window.332d00f563baab3b15a5.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("e6945ac8175d99044d2a")$/;"	f	variable:__webpack_require__
-h	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("823857b07be9c2bda0db")$/;"	f	variable:__webpack_require__
-h	.webpack/renderer/main_window.55ecc4292b715d09f322.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("19606476ed98423f93ef")$/;"	f	variable:__webpack_require__
-h	.webpack/renderer/main_window.6934b87c0fbd9b1cc2f1.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("6e6a6e9555687e92d066")$/;"	f	variable:__webpack_require__
-h	.webpack/renderer/main_window.6965f5c44f63c6d72f4f.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("1cc982f8031b56b3be36")$/;"	f	variable:__webpack_require__
-h	.webpack/renderer/main_window.6e6a6e9555687e92d066.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("ac255f13bc505eb0317c")$/;"	f	variable:__webpack_require__
-h	.webpack/renderer/main_window.7a259bb6ea032f0bde11.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("005161a6358c2347a310")$/;"	f	variable:__webpack_require__
-h	.webpack/renderer/main_window.823857b07be9c2bda0db.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("6934b87c0fbd9b1cc2f1")$/;"	f	variable:__webpack_require__
-h	.webpack/renderer/main_window.85fdc7995d46279f693d.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("b928d17629c706aded78")$/;"	f	variable:__webpack_require__
-h	.webpack/renderer/main_window.9bacfe13c347bf72cdc9.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("eff2b157e570c6f6fed3")$/;"	f	variable:__webpack_require__
-h	.webpack/renderer/main_window.a1c82de54ca071b49cea.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("1d61d7f9472fcc58e4f9")$/;"	f	variable:__webpack_require__
-h	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("ba7188ea1d9e95a7864e")$/;"	f	variable:__webpack_require__
-h	.webpack/renderer/main_window.b928d17629c706aded78.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("9bacfe13c347bf72cdc9")$/;"	f	variable:__webpack_require__
-h	.webpack/renderer/main_window.b974377e35453bd13a62.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("6965f5c44f63c6d72f4f")$/;"	f	variable:__webpack_require__
-h	.webpack/renderer/main_window.ba7188ea1d9e95a7864e.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("55ecc4292b715d09f322")$/;"	f	variable:__webpack_require__
-h	.webpack/renderer/main_window.e6945ac8175d99044d2a.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("85fdc7995d46279f693d")$/;"	f	variable:__webpack_require__
-h	.webpack/renderer/main_window.eff2b157e570c6f6fed3.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("b974377e35453bd13a62")$/;"	f	variable:__webpack_require__
-h	.webpack/renderer/main_window/index.js	/^\/******\/ 		__webpack_require__.h = () => ("1cc982f8031b56b3be36")$/;"	f	function:__webpack_require__
+h	.webpack/renderer/main_window.0173da1ffca6012127fa.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("8bc701bdc9b8be4fe590")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.0551150b1280dfbdc20a.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("92d91a8d8106c2a06bf1")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.17e3ee6c6236286f8ed6.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("3989c02e98e9f1ed68ee")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.1d665a2802a3df1efbfe.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("8534f77dc1ffdf433221")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.2d696333d0d54f8cc649.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("7d4c945c26522c06e2e6")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.2e4342b1d4bce8a69d51.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("d186514cf944cc879a3a")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.38bcc0ebe81903d59b14.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("bfe5fcb12866b8c88070")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.3989c02e98e9f1ed68ee.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("2e4342b1d4bce8a69d51")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.3cf2926172c67303ff08.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("a0662c5e24f319252d2b")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.428fe38c56a2e183d929.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("0551150b1280dfbdc20a")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.550cf912f85f677ef27e.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("428fe38c56a2e183d929")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.55b71cc03ec0594e19bf.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("17e3ee6c6236286f8ed6")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.59c4cfdcfa6845446e29.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("777850137bcb905cf2c4")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.6a712fb82c4912e65cb7.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("fdd402993190d4f0bbc2")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.7634dfeeec55da3f5e4c.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("c43af66ef56b40f2eab0")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("d258e25194733172ac78")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.79eb97b2b88cf08d4a6d.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("bded7a8ced4bd2b7c7c5")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.7b481e12967eb0d3ba53.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("c646918180f6442dafb5")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.7d137ee7f30cffa8e52b.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("db5bedf0941323a8cae9")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.7d4c945c26522c06e2e6.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("7d137ee7f30cffa8e52b")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.8bc701bdc9b8be4fe590.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("a2744bb700c063ee7f1c")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.92d91a8d8106c2a06bf1.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("0173da1ffca6012127fa")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.9a803c8511c637bcb0df.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("55b71cc03ec0594e19bf")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.a0662c5e24f319252d2b.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("79eb97b2b88cf08d4a6d")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.a2310c5f244497df0335.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("3cf2926172c67303ff08")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.a2744bb700c063ee7f1c.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("af36b72f291677480c5b")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.af36b72f291677480c5b.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("38bcc0ebe81903d59b14")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.baba687623b2ba68c4a5.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("9a803c8511c637bcb0df")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.bded7a8ced4bd2b7c7c5.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("ed7e08d7bdb8a5e4931a")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.bfe5fcb12866b8c88070.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("fadebd9cabe12eeacaf1")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.c43af66ef56b40f2eab0.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("7b481e12967eb0d3ba53")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.c646918180f6442dafb5.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("550cf912f85f677ef27e")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.d186514cf944cc879a3a.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("2d696333d0d54f8cc649")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.d258e25194733172ac78.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("1d665a2802a3df1efbfe")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.db5bedf0941323a8cae9.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("59c4cfdcfa6845446e29")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.e770636a81102043378f.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("baba687623b2ba68c4a5")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.ed7e08d7bdb8a5e4931a.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("6a712fb82c4912e65cb7")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.fadebd9cabe12eeacaf1.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("a2310c5f244497df0335")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window.fdd402993190d4f0bbc2.hot-update.js	/^\/******\/ 	__webpack_require__.h = () => ("e770636a81102043378f")$/;"	f	variable:__webpack_require__
+h	.webpack/renderer/main_window/index.js	/^\/******\/ 		__webpack_require__.h = () => ("8534f77dc1ffdf433221")$/;"	f	function:__webpack_require__
 height	.webpack/main/index.js	/^        height: 600,$/;"	p	variable:anonymousObject91d85ad61605
 hmrF	.webpack/renderer/main_window/index.js	/^\/******\/ 		__webpack_require__.hmrF = () => ("main_window." + __webpack_require__.h() + ".hot-/;"	f	function:__webpack_require__
 hmrM	.webpack/renderer/main_window/index.js	/^\/******\/ 		__webpack_require__.hmrM = () => {$/;"	f	function:__webpack_require__
@@ -980,6 +1049,7 @@ jsonp	.webpack/renderer/main_window/index.js	/^\/******\/ 		__webpack_require__.
 jsonp	.webpack/renderer/main_window/index.js	/^\/******\/ 		__webpack_require__.hmrI.jsonp = function (moduleId, applyHandlers) {$/;"	f	variable:__webpack_require__.hmrI
 jsonpHmr	.webpack/renderer/main_window/index.js	/^\/******\/ 				__webpack_require__.f.jsonpHmr = function (chunkId, promises) {$/;"	f	variable:__webpack_require__.f
 jsx	tsconfig.json	/^    "jsx": "react-jsx",$/;"	s	object:compilerOptions
+jsxSingleQuote	.prettierrc.json	/^  "jsxSingleQuote": false,$/;"	b
 keywords	package.json	/^  "keywords": [],$/;"	a
 l	.webpack/renderer/main_window/index.js	/^\/******\/ 		__webpack_require__.l = (url, done, key, chunkId) => {$/;"	f	function:__webpack_require__
 leafPrototypes	.webpack/renderer/main_window/index.js	/^\/******\/ 		var leafPrototypes;$/;"	v
@@ -994,27 +1064,45 @@ loadingEnded	.webpack/renderer/main_window/index.js	/^\/******\/ 				var loading
 localstorage	.webpack/main/index.js	/^function localstorage() {$/;"	f	variable:__webpack_modules__
 log	.webpack/main/index.js	/^function log() {$/;"	f	variable:__webpack_modules__
 m	.webpack/main/index.js	/^var m = s * 60;$/;"	v	variable:__webpack_modules__
-m	.webpack/renderer/main_window.005161a6358c2347a310.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-m	.webpack/renderer/main_window.19606476ed98423f93ef.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-m	.webpack/renderer/main_window.1d61d7f9472fcc58e4f9.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-m	.webpack/renderer/main_window.303fe97aca50623de173.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-m	.webpack/renderer/main_window.332d00f563baab3b15a5.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-m	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	a
-m	.webpack/renderer/main_window.55ecc4292b715d09f322.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-m	.webpack/renderer/main_window.6934b87c0fbd9b1cc2f1.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-m	.webpack/renderer/main_window.6965f5c44f63c6d72f4f.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-m	.webpack/renderer/main_window.6e6a6e9555687e92d066.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-m	.webpack/renderer/main_window.7a259bb6ea032f0bde11.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-m	.webpack/renderer/main_window.823857b07be9c2bda0db.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-m	.webpack/renderer/main_window.85fdc7995d46279f693d.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-m	.webpack/renderer/main_window.9bacfe13c347bf72cdc9.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-m	.webpack/renderer/main_window.a1c82de54ca071b49cea.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-m	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	a
-m	.webpack/renderer/main_window.b928d17629c706aded78.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-m	.webpack/renderer/main_window.b974377e35453bd13a62.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-m	.webpack/renderer/main_window.ba7188ea1d9e95a7864e.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-m	.webpack/renderer/main_window.e6945ac8175d99044d2a.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-m	.webpack/renderer/main_window.eff2b157e570c6f6fed3.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.0173da1ffca6012127fa.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.0551150b1280dfbdc20a.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.17e3ee6c6236286f8ed6.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.1d665a2802a3df1efbfe.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.2d696333d0d54f8cc649.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.2e4342b1d4bce8a69d51.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.38bcc0ebe81903d59b14.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.3989c02e98e9f1ed68ee.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.3cf2926172c67303ff08.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.428fe38c56a2e183d929.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.550cf912f85f677ef27e.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.55b71cc03ec0594e19bf.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.59c4cfdcfa6845446e29.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.6a712fb82c4912e65cb7.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.7634dfeeec55da3f5e4c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	a
+m	.webpack/renderer/main_window.79eb97b2b88cf08d4a6d.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.7b481e12967eb0d3ba53.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.7d137ee7f30cffa8e52b.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.7d4c945c26522c06e2e6.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.8bc701bdc9b8be4fe590.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.92d91a8d8106c2a06bf1.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.9a803c8511c637bcb0df.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.a0662c5e24f319252d2b.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.a2310c5f244497df0335.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.a2744bb700c063ee7f1c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.af36b72f291677480c5b.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.baba687623b2ba68c4a5.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.bded7a8ced4bd2b7c7c5.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.bfe5fcb12866b8c88070.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.c43af66ef56b40f2eab0.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.c646918180f6442dafb5.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.d186514cf944cc879a3a.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.d258e25194733172ac78.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.db5bedf0941323a8cae9.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.e770636a81102043378f.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.ed7e08d7bdb8a5e4931a.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.fadebd9cabe12eeacaf1.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+m	.webpack/renderer/main_window.fdd402993190d4f0bbc2.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
 main	package.json	/^  "main": ".webpack\/main",$/;"	s
 mainConfig	webpack.main.config.ts	/^export const mainConfig: Configuration = {$/;"	C
 mainWindow	.webpack/main/index.js	/^    mainWindow = new electron__WEBPACK_IMPORTED_MODULE_0__.BrowserWindow({$/;"	v
@@ -1087,27 +1175,45 @@ productName	package.json	/^  "productName": "edrt",$/;"	s
 publish	package.json	/^    "publish": "electron-forge publish",$/;"	s	object:scripts
 queuedInvalidatedModules	.webpack/renderer/main_window/index.js	/^\/******\/ 		var queuedInvalidatedModules;$/;"	v
 r	.webpack/main/index.js	/^\/******\/ 		__webpack_require__.r = (exports) => {$/;"	f	function:__webpack_require__
-r	.webpack/renderer/main_window.005161a6358c2347a310.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-r	.webpack/renderer/main_window.19606476ed98423f93ef.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-r	.webpack/renderer/main_window.1d61d7f9472fcc58e4f9.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-r	.webpack/renderer/main_window.303fe97aca50623de173.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-r	.webpack/renderer/main_window.332d00f563baab3b15a5.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-r	.webpack/renderer/main_window.475f0c909f8ae58da406.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	a
-r	.webpack/renderer/main_window.55ecc4292b715d09f322.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-r	.webpack/renderer/main_window.6934b87c0fbd9b1cc2f1.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-r	.webpack/renderer/main_window.6965f5c44f63c6d72f4f.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-r	.webpack/renderer/main_window.6e6a6e9555687e92d066.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-r	.webpack/renderer/main_window.7a259bb6ea032f0bde11.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-r	.webpack/renderer/main_window.823857b07be9c2bda0db.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-r	.webpack/renderer/main_window.85fdc7995d46279f693d.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-r	.webpack/renderer/main_window.9bacfe13c347bf72cdc9.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-r	.webpack/renderer/main_window.a1c82de54ca071b49cea.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-r	.webpack/renderer/main_window.ac255f13bc505eb0317c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	a
-r	.webpack/renderer/main_window.b928d17629c706aded78.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-r	.webpack/renderer/main_window.b974377e35453bd13a62.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-r	.webpack/renderer/main_window.ba7188ea1d9e95a7864e.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-r	.webpack/renderer/main_window.e6945ac8175d99044d2a.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
-r	.webpack/renderer/main_window.eff2b157e570c6f6fed3.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.0173da1ffca6012127fa.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.0551150b1280dfbdc20a.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.17e3ee6c6236286f8ed6.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.1d665a2802a3df1efbfe.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.2d696333d0d54f8cc649.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.2e4342b1d4bce8a69d51.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.38bcc0ebe81903d59b14.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.3989c02e98e9f1ed68ee.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.3cf2926172c67303ff08.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.428fe38c56a2e183d929.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.550cf912f85f677ef27e.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.55b71cc03ec0594e19bf.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.59c4cfdcfa6845446e29.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.6a712fb82c4912e65cb7.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.7634dfeeec55da3f5e4c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.777850137bcb905cf2c4.hot-update.json	/^{"c":["main_window"],"r":[],"m":[".\/node_modules\/.pnpm\/@babel+runtime@7.20.13\/node_modules\//;"	a
+r	.webpack/renderer/main_window.79eb97b2b88cf08d4a6d.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.7b481e12967eb0d3ba53.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.7d137ee7f30cffa8e52b.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.7d4c945c26522c06e2e6.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.8bc701bdc9b8be4fe590.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.92d91a8d8106c2a06bf1.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.9a803c8511c637bcb0df.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.a0662c5e24f319252d2b.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.a2310c5f244497df0335.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.a2744bb700c063ee7f1c.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.af36b72f291677480c5b.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.baba687623b2ba68c4a5.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.bded7a8ced4bd2b7c7c5.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.bfe5fcb12866b8c88070.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.c43af66ef56b40f2eab0.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.c646918180f6442dafb5.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.d186514cf944cc879a3a.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.d258e25194733172ac78.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.db5bedf0941323a8cae9.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.e770636a81102043378f.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.ed7e08d7bdb8a5e4931a.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.fadebd9cabe12eeacaf1.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
+r	.webpack/renderer/main_window.fdd402993190d4f0bbc2.hot-update.json	/^{"c":["main_window"],"r":[],"m":[]}/;"	a
 r	.webpack/renderer/main_window/index.js	/^\/******\/ 		__webpack_require__.r = (exports) => {$/;"	f	function:__webpack_require__
 r	.webpack/renderer/main_window/preload.js	/^\/******\/ 		__webpack_require__.r = (exports) => {$/;"	f	function:__webpack_require__
 react	package.json	/^    "react": "^18.2.0",$/;"	s	object:dependencies
@@ -1142,9 +1248,11 @@ scripts	.webpack/renderer/main_window/index.js	/^\/******\/ 				var scripts = do
 scripts	package.json	/^  "scripts": {$/;"	o
 selectColor	.webpack/main/index.js	/^function selectColor(namespace) {$/;"	f	variable:__webpack_modules__
 self	.webpack/renderer/main_window/index.js	/^\/******\/ 		self["webpackHotUpdateedrt"] = (chunkId, moreModules, runtime) => {$/;"	f
+semi	.prettierrc.json	/^  "semi": true,$/;"	b
 setStatus	.webpack/renderer/main_window/index.js	/^\/******\/ 		function setStatus(newStatus) {$/;"	f
 signature	.webpack/renderer/main_window/index.js	/^\/******\/ 				__webpack_require__.$Refresh$.signature = () => (__webpack_require__.$Refresh$.ru/;"	f	variable:__webpack_require__.$Refresh$
 signature	.webpack/renderer/main_window/preload.js	/^\/******\/ 				__webpack_require__.$Refresh$.signature = () => (__webpack_require__.$Refresh$.ru/;"	f	variable:__webpack_require__.$Refresh$
+singleQuote	.prettierrc.json	/^  "singleQuote": true,$/;"	b
 skipLibCheck	tsconfig.json	/^    "skipLibCheck": true,$/;"	b	object:compilerOptions
 sourceMap	tsconfig.json	/^    "sourceMap": true,$/;"	b	object:compilerOptions
 spawn	.webpack/main/index.js	/^var spawn = (__webpack_require__(\/*! child_process *\/ "child_process").spawn);$/;"	v	variable:__webpack_modules__
@@ -1155,14 +1263,15 @@ style-loader	package.json	/^    "style-loader": "^3.0.0",$/;"	s	object:devDepend
 swc-loader	package.json	/^    "swc-loader": "^0.2.3",$/;"	s	object:devDependencies
 t	.webpack/renderer/main_window/index.js	/^\/******\/ 		__webpack_require__.t = function(value, mode) {$/;"	f	function:__webpack_require__
 t	.webpack/renderer/main_window/preload.js	/^\/******\/ 		__webpack_require__.t = function(value, mode) {$/;"	f	function:__webpack_require__
+tabWidth	.prettierrc.json	/^  "tabWidth": 2,$/;"	n
 tag	.webpack/renderer/main_window/index.js	/^\/******\/ 				var tag = existingLinkTags[i];$/;"	v
 target	.webpack/renderer/main_window/index.js	/^\/******\/ 			var timeout = setTimeout(onScriptComplete.bind(null, undefined, { type: 'timeout',/;"	p	variable:anonymousObjectb75d26f30a05
 target	tsconfig.json	/^    "target": "ES6",$/;"	s	object:compilerOptions
 theme	src/renderer/theme/index.ts	/^const theme = createTheme({$/;"	C
 timeout	.webpack/renderer/main_window/index.js	/^\/******\/ 			var timeout = setTimeout(onScriptComplete.bind(null, undefined, { type: 'timeout',/;"	v
-titleBarStyle	.webpack/main/index.js	/^        titleBarStyle: 'hiddenInset',$/;"	p	variable:anonymousObject91d85ad61605
+titleBarStyle	.webpack/main/index.js	/^        titleBarStyle: 'hidden',$/;"	p	variable:anonymousObject91d85ad61605
 trackBlockingPromise	.webpack/renderer/main_window/index.js	/^\/******\/ 		function trackBlockingPromise(promise) {$/;"	f
-transparent	.webpack/main/index.js	/^        transparent: true,$/;"	p	variable:anonymousObject91d85ad61605
+trafficLightPosition	.webpack/main/index.js	/^        trafficLightPosition: {$/;"	p	variable:anonymousObject91d85ad61605
 ts-node	package.json	/^    "ts-node": "^10.0.0",$/;"	s	object:devDependencies
 tsconfig-paths-webpack-plugin	package.json	/^    "tsconfig-paths-webpack-plugin": "^4.0.0",$/;"	s	object:devDependencies
 tty	.webpack/main/index.js	/^\/***\/ "tty":$/;"	p	variable:__webpack_modules__
@@ -1188,7 +1297,6 @@ value	.webpack/renderer/main_window/index.js	/^\/******\/ 			Object.defineProper
 value	.webpack/renderer/main_window/preload.js	/^\/******\/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });$/;"	p	variable:anonymousObjecte72ffc220805
 value	.webpack/renderer/main_window/preload.js	/^\/******\/ 			Object.defineProperty(exports, '__esModule', { value: true });$/;"	p	variable:anonymousObjecte72ffc220905
 version	package.json	/^  "version": "1.0.0",$/;"	s
-vibrancy	.webpack/main/index.js	/^        vibrancy: 'menu',$/;"	p	variable:anonymousObject91d85ad61605
 waitForBlockingPromises	.webpack/renderer/main_window/index.js	/^\/******\/ 		function waitForBlockingPromises(fn) {$/;"	f
 waitingUpdateResolves	.webpack/renderer/main_window/index.js	/^\/******\/ 		var waitingUpdateResolves = {};$/;"	v
 warnUnexpectedRequire	.webpack/renderer/main_window/index.js	/^\/******\/ 			var warnUnexpectedRequire = function warnUnexpectedRequire(module) {$/;"	f	function:applyHandler
@@ -1197,5 +1305,7 @@ webPreferences	.webpack/main/index.js	/^        webPreferences: {$/;"	p	variable
 webpack	package.json	/^    "webpack": "^5.75.0"$/;"	s	object:devDependencies
 width	.webpack/main/index.js	/^        width: 800,$/;"	p	variable:anonymousObject91d85ad61605
 writable	.webpack/main/index.js	/^        writable: true$/;"	p	variable:__webpack_modules__.createWritableStdioStream.anonymousObject91d85ad60d05
+x	.webpack/main/index.js	/^            x: 15,$/;"	p	property:anonymousObject91d85ad61605.trafficLightPosition
+y	.webpack/main/index.js	/^            y: 16$/;"	p	property:anonymousObject91d85ad61605.trafficLightPosition
 y	.webpack/main/index.js	/^var y = d * 365.25;$/;"	v	variable:__webpack_modules__
 ~/*	tsconfig.json	/^      "~\/*": ["src\/*"],$/;"	a	object:compilerOptions.paths
