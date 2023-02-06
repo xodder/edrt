@@ -4,6 +4,10 @@ import React from 'react';
 import Screen from '~/renderer/screens/shared/screen';
 import { Column, Row, Center, Spacer } from '~/renderer/screens/shared/layout';
 import Divider from '~/renderer/screens/shared/divider';
+import * as monaco from 'monaco-editor';
+import Editor, { loader } from '@monaco-editor/react';
+
+loader.config({ monaco });
 
 const APPBAR_HEIGHT = 48;
 
@@ -33,6 +37,20 @@ function MainScreen() {
         <Column flex={1}>
           <Box height={APPBAR_HEIGHT} />
           <Divider width={1} color="grey.900" />
+          <Editor
+            theme="vs-dark"
+            :/ defaultLanguage="javascript"
+            defaultValue="// some comment"
+            options={{
+              // fontFamily: 'Times-Roman',
+              lineNumbersMinChars: 3,
+              codeLens: false,
+              minimap: { enabled: false },
+              // renderFinalNewline: true,
+              renderIndentGuides: true,
+              renderLineHighlight: 'all',
+            }}
+          />
         </Column>
       </Row>
     </Screen>

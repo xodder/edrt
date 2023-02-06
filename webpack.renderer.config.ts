@@ -5,6 +5,7 @@ import { plugins, resolvePlugins } from './webpack.plugins';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import path from 'path';
+import MonacoWebpackPlugin from 'monaco-editor-webpack-plugin';
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
@@ -30,6 +31,8 @@ rules.push({
 plugins.push(new MiniCssExtractPlugin({
   filename: 'assets/[name].css', 
 }));
+
+plugins.push(new MonacoWebpackPlugin());
 
 if (isDevelopment) {
   plugins.push(new ReactRefreshWebpackPlugin({
