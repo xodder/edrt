@@ -16,6 +16,7 @@ specifiers:
   '@pmmmwh/react-refresh-webpack-plugin': ^0.5.10
   '@swc/core': ^1.3.32
   '@types/dotenv-webpack': ^7.0.3
+  '@types/lodash': ^4.14.191
   '@types/node': ^18.11.18
   '@types/react': ^18.0.27
   '@types/react-dom': ^18.0.10
@@ -23,12 +24,14 @@ specifiers:
   '@typescript-eslint/parser': ^5.0.0
   '@vercel/webpack-asset-relocator-loader': 1.7.3
   '@vscode/vscode-languagedetection': ^1.0.22
+  colord: ^2.9.3
   css-loader: ^6.0.0
   dotenv-webpack: ^8.0.1
   electron: 22.1.0
   electron-squirrel-startup: ^1.0.0
   eslint: ^8.0.1
   eslint-plugin-import: ^2.25.0
+  lodash: ^4.17.21
   mdi-material-ui: ^7.6.0
   mini-css-extract-plugin: ^2.7.2
   monaco-editor: ^0.34.1
@@ -52,7 +55,9 @@ dependencies:
   '@monaco-editor/react': 4.4.6_6vrjaj6ridxbohi43n7zt4gn7q
   '@mui/material': 5.11.7_rqh7qj4464ntrqrt6banhaqg4q
   '@vscode/vscode-languagedetection': 1.0.22
+  colord: 2.9.3
   electron-squirrel-startup: 1.0.0
+  lodash: 4.17.21
   mdi-material-ui: 7.6.0_gcc4slj53ya266xgbug43l7pri
   monaco-editor: 0.34.1
   react: 18.2.0
@@ -69,6 +74,7 @@ devDependencies:
   '@pmmmwh/react-refresh-webpack-plugin': 0.5.10_dqkv4m7npkipjgwwzxtt3fzsx4
   '@swc/core': 1.3.32
   '@types/dotenv-webpack': 7.0.3_@swc+core@1.3.32
+  '@types/lodash': 4.14.191
   '@types/node': 18.11.18
   '@types/react': 18.0.27
   '@types/react-dom': 18.0.10
@@ -1293,6 +1299,10 @@ packages:
       '@types/node': 18.11.18
     dev: true
 
+  /@types/lodash/4.14.191:
+    resolution: {integrity: sha512-BdZ5BCCvho3EIXw6wUCXHe7rS53AIDPLE+JzwgT+OsJk53oBfbSmZZ7CX4VaRoN78N+TJpFi9QPlfIVNmJYWxQ==}
+    dev: true
+
   /@types/mime/3.0.1:
     resolution: {integrity: sha512-Y4XFY5VJAuw0FgAqPNd6NNoV44jbq9Bz2L7Rh/J6jLTiHBSBJa9fxqQIvkIld4GsoDOcCbvzOUAbLPsSKKg+uA==}
     dev: true
@@ -2273,6 +2283,10 @@ packages:
     resolution: {integrity: sha512-qiBjkpbMLO/HL68y+lh4q0/O1MZFj2RX6X/KmMa3+gJD3z+WwI1ZzDHysvqHGS3mP6mznPckpXmw1nI9cJjyRg==}
     hasBin: true
     dev: true
+
+  /colord/2.9.3:
+    resolution: {integrity: sha512-jeC1axXpnb0/2nn/Y1LPuLdgXBLH7aDcHu4KEKfqw3CUhX7ZpfBSlPKyqXE6btIgEzfWtrX3/tyBCaCvXvMkOw==}
+    dev: false
 
   /colorette/2.0.19:
     resolution: {integrity: sha512-3tlv/dIP7FWvj3BsbHrGLJ6l/oKh1O3TcgBqMn+yyCagOxc23fyzDS6HypQbgxWbkpDnf52p1LuR4eWDQ/K9WQ==}
@@ -4479,7 +4493,6 @@ packages:
 
   /lodash/4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
-    dev: true
 
   /log-symbols/4.1.0:
     resolution: {integrity: sha512-8XPvpAA8uyhfteu8pIvQxpJZ7SYYdpUivZpGy6sFsBuKRY/7rQGavedeB8aK+Zkyq6upMFVL/9AW6vOYzfRyLg==}

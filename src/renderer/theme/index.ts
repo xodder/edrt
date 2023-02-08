@@ -8,7 +8,7 @@ import '@fontsource/roboto/900.css';
 
 const theme = createTheme({
   palette: {
-    mode: 'dark',
+    mode: 'light',
   },
   components: {
     MuiCssBaseline: {
