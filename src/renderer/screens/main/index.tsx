@@ -1,5 +1,5 @@
-import stringToRGB from '~/renderer/utils/string-to-rgb';
 import { colord } from 'colord';
+import ScrollBox from '~/renderer/screens/shared/scroll-box';
 import _get from 'lodash/get';
 import {
   alpha,
@@ -27,13 +27,29 @@ import Editor, { loader } from '@monaco-editor/react';
 loader.config({ monaco });
 
 const APPBAR_HEIGHT = 48;
+const range = (start: number, end: number) => {
+  const inc = start < end ? 1 : -1;
+  return Array.from(
+    { length: Math.abs(start - end) + 1 },
+    (_, i) => start + inc * i
+  );
+};
 
-const files = [
-  { name: 'Untitled 1', type: '', content: '' },
-  { name: 'Untitled 2', type: '', content: '' },
-  { name: 'Untitled 3', type: '', content: '' },
-  { name: 'Untitled 4', type: '', content: '' },
-];
+const emojis = [
+  128513, 128591, 128640, 128704, 128641, 128709, 127757, 128359,
+].reduce<string[]>((acc, x, i, entries) => {
+  if (i % 2 === 1) return acc;
+
+  return acc.concat(range(x, entries[i + 1]).map((s) => `&#${s};`));
+}, []);
+
+const randEmoji = () => emojis[Math.round(Math.random() * emojis.length)];
+const files = Array.from({ length: 6 }, (_, i) => ({
+  name: `Untitled ${i + 1}`,
+  emoji: '', // randEmoji(),
+  type: '',
+  content: '',
+}));
 
 function MainScreen() {
   useSetMonacoTheme();
@@ -42,25 +58,28 @@ function MainScreen() {
     <Screen>
       <AppBar />
       <Row width={1} height={1}>
-        <Column bgcolor="background.main" width={180} flexShrink={0}>
+        <Column
+          bgcolor="background.main"
+          width={180}
+          height={1}
+          flexShrink={0}
+        >
           <Row px={1} crossAxisAlignment="center" height={APPBAR_HEIGHT}>
             <Flexible />
-            <IconButton color="primary">
+            <IconButton color="primary" edge="end">
               <Plus />
             </IconButton>
           </Row>
           <Divider
-            weight={6}
-            width={72}
+            weight={3}
+            width={48}
             color="divider"
             borderRadius="0 8px 8px 0"
           />
-          <Spacer sy={2} />
           <XList />
         </Column>
         <Column flex={1}>
-          <Box height={APPBAR_HEIGHT} />
-          {/* <Divider width={1} color="divider" /> */}
+          <Box height={APPBAR_HEIGHT} flexShrink={0} />
           <Editor
             defaultLanguage="text/plain"
             defaultValue="// some comment"
@@ -94,7 +113,7 @@ function AppBar() {
       left={0}
       width={1}
       height={APPBAR_HEIGHT}
-      sx={{ '-webkit-app-region': 'drag' }}
+      sx={{ WebkitAppRegion: 'drag' }}
     />
   );
 }
@@ -103,28 +122,35 @@ function XList() {
   const [selectedIndex, setSelectedIndex] = React.useState(0);
 
   return (
-    <Column height={1}>
-      {files.map((file, index) => (
-        <XListItem
-          key={index}
-          label={file.name}
-          selected={selectedIndex === index}
-          onClick={() => setSelectedIndex(index)}
-        />
-      ))}
-    </Column>
+    <ScrollBox
+      shadows="vertical"
+      height={1}
+      barColor="action.active"
+      fillHeight
+    >
+      <Column height={1}>
+        {files.map((file, index) => (
+          <XListItem
+            key={index}
+            item={file}
+            selected={selectedIndex === index}
+            onClick={() => setSelectedIndex(index)}
+          />
+        ))}
+      </Column>
+    </ScrollBox>
   );
 }
 
 type XListItemProps = {
   label: string;
+  item: (typeof files)[number];
   selected: boolean;
   onClick: () => void;
 };
 
-function XListItem({ label, selected, onClick }: XListItemProps) {
+function XListItem({ label, item, selected, onClick }: XListItemProps) {
   const c = useThemeColor();
-  const theme = useTheme();
   const tint = selected ? c('primary.main') : c('text.secondary');
 
   return (
@@ -150,17 +176,17 @@ function XListItem({ label, selected, onClick }: XListItemProps) {
           transform: 'translateY(-50%)',
           width: 6,
           height: 4,
-          bgcolor: theme.palette.primary.main,
+          bgcolor: c('primary.main'),
         },
       }}
     >
-      <Box
-        width={20}
-        height={20}
-        borderRadius="50%"
-        bgcolor={tint}
-      />
-      <Typography color="inherit">{label}</Typography>
+      {item.emoji ? (
+        <Typography dangerouslySetInnerHTML={{ __html: item.emoji }} />
+      ) : (
+        <Box width={20} height={20} borderRadius="50%" bgcolor={tint} />
+      )}
+      {/* <Typography dangerouslySetInnerHTML={{ __html: item.emoji }} /> */}
+      <Typography color="inherit">{item.name}</Typography>
     </Row>
   );
 }
@@ -170,7 +196,7 @@ function useSetMonacoTheme() {
   const c = useThemeColor();
 
   React.useEffect(() => {
-    monaco.editor.defineTheme('dtheme', {
+    monaco.editor.defineTheme('xtheme', {
       base: theme.palette.mode === 'dark' ? 'vs-dark' : 'vs',
       inherit: true,
       rules: [
@@ -187,11 +213,13 @@ function useSetMonacoTheme() {
         'editorCursor.foreground': c('secondary.main'),
         'editor.lineHighlightBackground': c('primary.main', { a: 0.05 }),
         'editor.lineHighlightBorder': c('primary.main', { a: 0.05 }),
-        'editorLineNumber.foreground': c('text.disabled'), 
+        'editorLineNumber.foreground': c('text.disabled'),
         'editorLineNumber.activeForeground': c('text.primary'),
         'editor.selectionBackground': c('secondary.main', { a: 0.2 }),
         'editor.inactiveSelectionBackground': c('secondary.main', { a: 0.1 }),
-        'editor.selectionHighlightBackground': c('secondary.main', { a: 0.05 }),
+        'editor.selectionHighlightBackground': c('secondary.main', {
+          a: 0.05,
+        }),
         // 'scrollbarSlider.background': undefined,
         // 'scrollbarSlider.hoverBackground': undefined,
         // 'scrollbarSlider.activeBackground': undefined,
@@ -199,15 +227,15 @@ function useSetMonacoTheme() {
         //
       },
     });
-    
-    monaco.editor.setTheme('dtheme');
+
+    monaco.editor.setTheme('xtheme');
   });
 }
 
 function useThemeColor() {
   const theme = useTheme();
 
-  return (key: string, config: { a:number, d: number, l: number } = {}) => {
+  return (key: string, config: { a: number; d: number; l: number } = {}) => {
     const color = _get(theme.palette, key);
 
     if (!color) return undefined;
@@ -219,7 +247,7 @@ function useThemeColor() {
     if (config.l) result = result.lighten(config.l);
 
     return result.toHex();
-  }
+  };
 }
 
 export default MainScreen;

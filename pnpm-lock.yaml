@@ -40,6 +40,8 @@ specifiers:
   react: ^18.2.0
   react-dom: ^18.2.0
   react-refresh: ^0.14.0
+  simplebar: ^6.2.0
+  simplebar-react: ^3.2.0
   style-loader: ^3.0.0
   swc-loader: ^0.2.3
   ts-node: ^10.0.0
@@ -62,6 +64,8 @@ dependencies:
   monaco-editor: 0.34.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  simplebar: 6.2.0
+  simplebar-react: 3.2.0_react@18.2.0
 
 devDependencies:
   '@electron-forge/cli': 6.0.4
@@ -2123,6 +2127,10 @@ packages:
     engines: {node: '>=6'}
     dev: true
     optional: true
+
+  /can-use-dom/0.1.0:
+    resolution: {integrity: sha512-ceOhN1DL7Y4O6M0j9ICgmTYziV89WMd96SvSl0REd8PMgrY0B/WBOPoed5S1KUmJqXgUXh8gzSe6E3ae27upsQ==}
+    dev: false
 
   /caniuse-lite/1.0.30001450:
     resolution: {integrity: sha512-qMBmvmQmFXaSxexkjjfMvD5rnDL0+m+dUMZKoDYsGG8iZN29RuYh9eRoMvKsT6uMAWlyUUGDEQGJJYjzCIO9ew==}
@@ -5922,6 +5930,29 @@ packages:
   /signal-exit/3.0.7:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==}
     dev: true
+
+  /simplebar-core/1.2.0:
+    resolution: {integrity: sha512-OgF3poOTi3mzj6HmNvuJfPtvMH/7OsMC+2H3HXQUzddyRDxUifpjHx1/3ozziWWAGTrJejLtu4E8h/kK3eboWQ==}
+    dependencies:
+      can-use-dom: 0.1.0
+      lodash: 4.17.21
+    dev: false
+
+  /simplebar-react/3.2.0_react@18.2.0:
+    resolution: {integrity: sha512-rsKUAAARhZ/w5f/uoUf3PWjNVQN7CsFrOPMqJSsXtM2lTyXmiN5femuPLHeY0+95EF2QcQigKQABq9A2a6EvJg==}
+    peerDependencies:
+      react: '>=16.8.0'
+    dependencies:
+      react: 18.2.0
+      simplebar-core: 1.2.0
+    dev: false
+
+  /simplebar/6.2.0:
+    resolution: {integrity: sha512-KiXO9hGg0wK7Oh5zbcdHKEPGlyem3IWA27HLKqolrhpToP0SA8iLf5tbXFBS4qRH4QTXiUn87wh9zCd4GnCZeQ==}
+    dependencies:
+      can-use-dom: 0.1.0
+      simplebar-core: 1.2.0
+    dev: false
 
   /slash/3.0.0:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}

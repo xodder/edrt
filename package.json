@@ -30,7 +30,9 @@
     "mdi-material-ui": "^7.6.0",
     "monaco-editor": "^0.34.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "simplebar": "^6.2.0",
+    "simplebar-react": "^3.2.0"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.4",
