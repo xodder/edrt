@@ -23,18 +23,11 @@ import Divider from '~/renderer/screens/shared/divider';
 import { Plus, PlusCircle } from 'mdi-material-ui';
 import * as monaco from 'monaco-editor';
 import Editor, { loader } from '@monaco-editor/react';
-import MainScreenProvider from './provider';
+import MainScreenProvider, { useMainScreenXeate, useAddNewItem } from './provider';
 
 loader.config({ monaco });
 
 const APPBAR_HEIGHT = 48;
-
-const files = Array.from({ length: 1 }, (_, i) => ({
-  name: `Untitled ${i + 1}`,
-  emoji: '', // randomEmoji(),
-  type: '',
-  content: '',
-}));
 
 function MainScreen() {
   useSetMonacoTheme();
@@ -44,28 +37,9 @@ function MainScreen() {
       <Screen>
         <AppBar />
         <Row width={1} height={1}>
-          <Column
-            bgcolor="background.main"
-            width={180}
-            height={1}
-            flexShrink={0}
-          >
-            <Row px={1} crossAxisAlignment="center" height={APPBAR_HEIGHT}>
-              <Flexible />
-              <IconButton color="primary" edge="end" sx={{ WebkitAppRegion: 'no-drag', cursor: 'default' }}>
-                <Plus fontSize="small" />
-              </IconButton>
-            </Row>
-            <Divider
-              weight={3}
-              width={48}
-              color="divider"
-              borderRadius="0 8px 8px 0"
-            />
-            <XList />
-          </Column>
+          <ItemListSection />
           <Column flex={1}>
-            <Box height={APPBAR_HEIGHT} flexShrink={0} />
+            <AppBarDelegate flexShrink={0} />
             <Editor
               defaultLanguage="text/plain"
               defaultValue=""
@@ -80,9 +54,9 @@ function MainScreen() {
                 lineNumbers: true,
                 codeLens: false,
                 minimap: { enabled: false },
-              // renderFinalNewline: true,
-              // renderIndentGuides: true,
-              renderLineHighlight: 'all',
+                // renderFinalNewline: true,
+                // renderIndentGuides: true,
+                renderLineHighlight: 'all',
               }}
             />
           </Column>
@@ -102,6 +76,70 @@ function AppBar() {
       height={APPBAR_HEIGHT}
       sx={{ WebkitAppRegion: 'drag' }}
     />
+  );
+}
+
+function AppBarDelegate(props: BoxProps) {
+  return (
+    <Box
+      {...props}
+      height={APPBAR_HEIGHT}
+      sx={{ WebkitAppRegion: 'drag', ...props.sx }}
+    />
+  );
+}
+
+function ItemListSection() {
+  const [selectedIndex, setSelectedIndex] = React.useState(0);
+  const xeate = useMainScreenXeate();
+  const items = xeate.get('items') as typeof xeate.current.items;
+  const activeItemId = xeate.get('activeItemId');
+
+  return (
+    <Column bgcolor="background.main" width={180} height={1} flexShrink={0}>
+      <AppBarDelegate component={Row} px={1} crossAxisAlignment="center">
+        <Flexible />
+        <NewItemButton />
+      </AppBarDelegate>
+      <Divider
+        weight={3}
+        width={48}
+        color="divider"
+        borderRadius="0 8px 8px 0"
+      />
+      <ScrollBox
+        shadows="vertical"
+        height={1}
+        barColor="action.active"
+        fillHeight
+      >
+        <Column>
+          {items.map((item, index) => (
+            <XListItem
+              key={item.id}
+              item={item}
+              selected={activeItemId === item.id}
+              onClick={() => xeate.set('activeItemId', item.id)}
+            />
+          ))}
+        </Column>
+      </ScrollBox>
+    </Column>
+  );
+}
+
+function NewItemButton() {
+  const addNewItem = useAddNewItem();
+
+  return (
+    <IconButton
+      color="primary"
+      edge="end"
+      onClick={() => addNewItem()}
+      sx={{ WebkitAppRegion: 'no-drag', cursor: 'default' }}
+    >
+      <Plus fontSize="small" />
+    </IconButton>
   );
 }
 
@@ -153,18 +191,18 @@ function XListItem({ label, item, selected, onClick }: XListItemProps) {
         cursor: 'pointer',
         '&:hover': {
           color: !selected ? 'text.primary' : undefined,
-      },
-      '&::after': {
-        content: '""',
-        opacity: selected ? 1 : 0,
-        position: 'absolute',
-        top: '50%',
-        left: 0,
-        transform: 'translateY(-50%)',
-        width: 6,
-        height: 4,
-        bgcolor: c('primary.main'),
-      },
+        },
+        '&::after': {
+          content: '""',
+          opacity: selected ? 1 : 0,
+          position: 'absolute',
+          top: '50%',
+          left: 0,
+          transform: 'translateY(-50%)',
+          width: 6,
+          height: 4,
+          bgcolor: c('primary.main'),
+        },
       }}
     >
       {item.emoji ? (
