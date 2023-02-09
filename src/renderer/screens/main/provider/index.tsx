@@ -55,7 +55,22 @@ export function useUpdateItem() {
 
   return (itemId: string, updates: Partial<Item>) => {
     const index = xeate.current.items.findIndex(item => item.id === itemId);
-    xeate.set(`items.${index}`, (item) => ({ ...item, ...updates }));
+   
+    if (index !== -1) {
+      xeate.set(`items.${index}`, (item) => ({ ...item, ...updates }));
+    }
+  };
+}
+
+export function useRemoveItem() {
+  const xeate = useXeate();
+  
+  return (itemId: string) => {
+    const index = xeate.current.items.findIndex(item => item.id === itemId);
+
+    if (index !== -1) {
+      xeate.remove(`items.${index}`)
+    }
   };
 }
 
