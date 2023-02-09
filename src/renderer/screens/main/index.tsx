@@ -143,30 +143,6 @@ function NewItemButton() {
   );
 }
 
-function XList() {
-  const [selectedIndex, setSelectedIndex] = React.useState(0);
-
-  return (
-    <ScrollBox
-      shadows="vertical"
-      height={1}
-      barColor="action.active"
-      fillHeight
-    >
-      <Column height={1}>
-        {files.map((file, index) => (
-          <XListItem
-            key={index}
-            item={file}
-            selected={selectedIndex === index}
-            onClick={() => setSelectedIndex(index)}
-          />
-        ))}
-      </Column>
-    </ScrollBox>
-  );
-}
-
 type XListItemProps = {
   label: string;
   item: (typeof files)[number];
