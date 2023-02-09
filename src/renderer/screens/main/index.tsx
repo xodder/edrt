@@ -20,7 +20,7 @@ import {
   Flexible,
 } from '~/renderer/screens/shared/layout';
 import Divider from '~/renderer/screens/shared/divider';
-import { Plus } from 'mdi-material-ui';
+import { Plus, PlusCircle } from 'mdi-material-ui';
 import * as monaco from 'monaco-editor';
 import Editor, { loader } from '@monaco-editor/react';
 
@@ -39,12 +39,12 @@ const emojis = [
   128513, 128591, 128640, 128704, 128641, 128709, 127757, 128359,
 ].reduce<string[]>((acc, x, i, entries) => {
   if (i % 2 === 1) return acc;
-
   return acc.concat(range(x, entries[i + 1]).map((s) => `&#${s};`));
 }, []);
 
 const randEmoji = () => emojis[Math.round(Math.random() * emojis.length)];
-const files = Array.from({ length: 6 }, (_, i) => ({
+
+const files = Array.from({ length: 1 }, (_, i) => ({
   name: `Untitled ${i + 1}`,
   emoji: '', // randEmoji(),
   type: '',
@@ -66,8 +66,8 @@ function MainScreen() {
         >
           <Row px={1} crossAxisAlignment="center" height={APPBAR_HEIGHT}>
             <Flexible />
-            <IconButton color="primary" edge="end">
-              <Plus />
+            <IconButton color="primary" edge="end" sx={{ WebkitAppRegion: 'no-drag', cursor: 'default' }}>
+              <Plus fontSize="small" />
             </IconButton>
           </Row>
           <Divider
@@ -82,7 +82,7 @@ function MainScreen() {
           <Box height={APPBAR_HEIGHT} flexShrink={0} />
           <Editor
             defaultLanguage="text/plain"
-            defaultValue="// some comment"
+            defaultValue=""
             options={{
               glyphMargin: false,
               // fontFamily: 'Times-Roman',
@@ -196,7 +196,9 @@ function useSetMonacoTheme() {
   const c = useThemeColor();
 
   React.useEffect(() => {
-    monaco.editor.defineTheme('xtheme', {
+    const id = 'xtheme'; //Math.round(Math.random() * 1000).toString();
+
+    monaco.editor.defineTheme(id, {
       base: theme.palette.mode === 'dark' ? 'vs-dark' : 'vs',
       inherit: true,
       rules: [
@@ -228,7 +230,7 @@ function useSetMonacoTheme() {
       },
     });
 
-    monaco.editor.setTheme('xtheme');
+    monaco.editor.setTheme(id);
   });
 }
 
