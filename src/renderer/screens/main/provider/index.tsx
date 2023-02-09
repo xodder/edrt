@@ -50,6 +50,15 @@ export function useAddNewItem() {
   };
 }
 
+export function useUpdateItem() {
+  const xeate = useXeate();
+
+  return (itemId: string, updates: Partial<Item>) => {
+    const index = xeate.current.items.findIndex(item => item.id === itemId);
+    xeate.set(`items.${index}`, (item) => ({ ...item, ...updates }));
+  };
+}
+
 function newItem(index: number) {
   return {
     id: genStr(5),

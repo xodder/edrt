@@ -8,6 +8,7 @@ import {
   Button,
   Typography,
   IconButton,
+  InputBase,
   useTheme,
 } from '@mui/material';
 import React from 'react';
@@ -23,7 +24,11 @@ import Divider from '~/renderer/screens/shared/divider';
 import { Plus, PlusCircle } from 'mdi-material-ui';
 import * as monaco from 'monaco-editor';
 import Editor, { loader } from '@monaco-editor/react';
-import MainScreenProvider, { useMainScreenXeate, useAddNewItem } from './provider';
+import MainScreenProvider, {
+  useMainScreenXeate,
+  useAddNewItem,
+  useUpdateItem,
+} from './provider';
 
 loader.config({ monaco });
 
@@ -151,8 +156,34 @@ type XListItemProps = {
 };
 
 function XListItem({ label, item, selected, onClick }: XListItemProps) {
+  const [editMode, setEditMode] = React.useState(false);
+  const [draftItemName, setDraftItemName] = React.useState(item.name);
+
+  const updateItem = useUpdateItem();
   const c = useThemeColor();
-  const tint = selected ? c('primary.main') : c('text.secondary');
+  const tint = editMode ? c('warning.main', { a: 0.75 }) : selected ? c('primary.main') : c('text.secondary');
+
+  function handleInputKeyDown(e: KeyboardEvent<unknown>) {
+    if (e.key === 'Enter') {
+      updateItemNameAndExitEditMode();
+    } else if (e.key === 'Escape') {
+      revertDraftItemNameAndExitEditMode();
+    }
+  }
+
+  function revertDraftItemNameAndExitEditMode() {
+    setDraftItemName(item.name);
+    setEditMode(false);
+  }
+
+  function handleInputBlur() {
+    updateItemNameAndExitEditMode();
+  }
+
+  function updateItemNameAndExitEditMode() {
+    updateItem(item.id, { name: draftItemName });
+    setEditMode(false);
+  }
 
   return (
     <Row
@@ -168,7 +199,7 @@ function XListItem({ label, item, selected, onClick }: XListItemProps) {
         '&:hover': {
           color: !selected ? 'text.primary' : undefined,
         },
-        '&::after': {
+        '&::before': {
           content: '""',
           opacity: selected ? 1 : 0,
           position: 'absolute',
@@ -177,17 +208,41 @@ function XListItem({ label, item, selected, onClick }: XListItemProps) {
           transform: 'translateY(-50%)',
           width: 6,
           height: 4,
-          bgcolor: c('primary.main'),
+          bgcolor: tint,
         },
       }}
     >
       {item.emoji ? (
         <Typography dangerouslySetInnerHTML={{ __html: item.emoji }} />
       ) : (
-        <Box width={20} height={20} borderRadius="50%" bgcolor={tint} />
+        <Box
+          width={20}
+          height={20}
+          borderRadius="50%"
+          bgcolor={tint}
+          flexShrink={0}
+        />
       )}
-      {/* <Typography dangerouslySetInnerHTML={{ __html: item.emoji }} /> */}
-      <Typography color="inherit">{item.name}</Typography>
+      {!editMode && (
+        <Typography
+          color="inherit"
+          sx={{ WebkitUserSelect: 'none' }}
+          onDoubleClick={() => setEditMode(true)}
+        >
+          {item.name}
+        </Typography>
+      )}
+      {editMode && (
+        <InputBase
+          value={draftItemName}
+          onChange={e => setDraftItemName(e.target.value)}
+          onBlur={handleInputBlur}
+          inputProps={{ style: { padding: 0, height: 'unset' } }}
+          onKeyDown={handleInputKeyDown}
+          sx={{ lineHeight: 1.5, caretColor: tint }}
+          autoFocus
+        />
+      )}
     </Row>
   );
 }
