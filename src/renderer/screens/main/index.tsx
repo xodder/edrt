@@ -176,13 +176,26 @@ function XListItem({ label, item, selected, onClick }: XListItemProps) {
     setEditMode(false);
   }
 
-  function handleInputBlur() {
+  function handleInputBlur(e: InputEvent<HTMLInputElement>) {
+    // don't lose focus if input is empty
+    if (draftItemName.trim().length === 0) {
+      e.target.focus();
+      return; 
+    }
+
     updateItemNameAndExitEditMode();
   }
 
   function updateItemNameAndExitEditMode() {
-    updateItem(item.id, { name: draftItemName });
-    setEditMode(false);
+    const newName = draftItemName.trim();
+
+    if (newName.length > 0) {
+      if (item.name !== newName) {
+        updateItem(item.id, { name: newName });
+      }
+
+      setEditMode(false);
+    }
   }
 
   return (
