@@ -38,6 +38,10 @@ function UpdateXeate() {
       // add new item
       if (!items.length) {
         items = [await window.api.item.new()];
+      } else {
+        items.forEach(item => {
+          // void window.api.item.remove(item.id);
+        })
       }
 
       xeate.setMulti({

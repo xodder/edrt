@@ -23,6 +23,7 @@ import {
 } from '~/renderer/screens/shared/layout';
 import Divider from '~/renderer/screens/shared/divider';
 import { Plus, PlusCircle, PlusBox, Close } from 'mdi-material-ui';
+import { useDrag, useDrop } from 'react-dnd';
 import * as monaco from 'monaco-editor';
 import Editor, { loader } from '@monaco-editor/react';
 import MainScreenProvider, {
@@ -100,7 +101,7 @@ function ItemListSection() {
         barColor="action.active"
         fillHeight
       >
-        <Column>
+        <Column height={1}>
           {items.map((item, index) => (
             <XListItem
               key={item.id}
@@ -132,22 +133,24 @@ function NewItemButton() {
 
 type XListItemProps = {
   label: string;
-  item: (typeof files)[number];
+  item: Item;
   selected: boolean;
   onClick: () => void;
 };
 
 function XListItem({ label, item, selected, onClick }: XListItemProps) {
+  const ref = React.useRef<HTMLDivElement | undefined>();
   const [editMode, setEditMode] = React.useState(false);
   const [draftItemName, setDraftItemName] = React.useState(item.name);
+  const { isDragging, isOver } = useItemDragAndDrop(ref, item, !editMode);
 
   const updateItem = useUpdateItem();
   const c = useThemeColor();
   const tint = editMode
     ? c('warning.main', { a: 0.75 })
     : selected
-    ? c('primary.main')
-    : c('text.secondary');
+    ? 'primary.main'
+    : 'text.secondary';
 
   function handleInputKeyDown(e: KeyboardEvent<unknown>) {
     if (e.key === 'Enter') {
@@ -186,6 +189,7 @@ function XListItem({ label, item, selected, onClick }: XListItemProps) {
 
   return (
     <Row
+      ref={ref}
       px={2}
       py={1.45}
       gap={2}
@@ -195,20 +199,12 @@ function XListItem({ label, item, selected, onClick }: XListItemProps) {
       color={tint}
       sx={{
         cursor: 'pointer',
+        opacity: isDragging ? 0 : 1,
         '&:hover': {
           color: !selected ? 'text.primary' : undefined,
           '&::before': {
             opacity: 1,
           },
-          ...when(!editMode, {
-            '.icon': {
-              opacity: 0,
-            },
-            '.remove': {
-              display: 'block',
-              opacity: 1,
-            },
-          }),
         },
         '&::before': {
           content: '""',
@@ -223,7 +219,21 @@ function XListItem({ label, item, selected, onClick }: XListItemProps) {
         },
       }}
     >
-      <Box position="relative" flexShrink={0}>
+      <Box
+        position="relative"
+        flexShrink={0}
+        sx={{
+          '&:hover': when(!editMode, {
+            '.icon': {
+              opacity: 0,
+            },
+            '.remove': {
+              display: 'block',
+              opacity: 1,
+            },
+          }),
+        }}
+      >
         <ItemIcon className="icon" item={item} tint={tint} />
         <ItemRemoveButton className="remove" item={item} />
       </Box>
@@ -251,6 +261,62 @@ function XListItem({ label, item, selected, onClick }: XListItemProps) {
       )}
     </Row>
   );
+}
+
+function useItemDragAndDrop(
+  elRef: React.MutableRefObject<unknown>,
+  item: Item,
+  enabled: boolean
+) {
+  const xeate = useMainScreenXeate();
+
+  function moveItem(itemId: string, toIndex: number) {
+    xeate.set('items', (items) => {
+      const fromIndex = items.findIndex((x) => x.id === itemId);
+
+      let updated = [...items];
+
+      updated.splice(fromIndex, 1);
+      updated.splice(toIndex, 0, items[fromIndex]);
+      updated = updated.map((item, index) => ({ ...item, index }));
+
+      return updated;
+    });
+  }
+
+  const [{ isDragging }, drag] = useDrag(
+    () => ({
+      type: 'item',
+      canDrag: enabled,
+      item: { id: item.id, index: item.index },
+      collect: (monitor) => ({
+        isDragging: monitor.isDragging(),
+      }),
+      end: (droppedItem, monitor) => {
+        if (!monitor.didDrop()) {
+          moveItem(droppedItem.id, droppedItem.index);
+        }
+      },
+    }),
+    [item, moveItem]
+  );
+
+  const [{ isOver }, drop] = useDrop(
+    () => ({
+      accept: 'item',
+      hover: (draggedItem) => {
+        if (draggedItem.id !== item.id) {
+          moveItem(draggedItem.id, item.index);
+        }
+      },
+      collect: (monitor) => ({ isOver: monitor.isOver() }),
+    }),
+    [item]
+  );
+
+  drag(drop(elRef));
+
+  return { isDragging, isOver };
 }
 
 function when(condition: boolean, value: any) {

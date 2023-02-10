@@ -43,6 +43,7 @@ class ItemManager {
       name: `Untitled ${index + 1}`,
       language: 'text/plain',
       filePath: path.resolve(this.root, id),
+      index,
     };
 
     // add record to store
