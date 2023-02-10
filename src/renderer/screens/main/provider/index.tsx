@@ -92,7 +92,20 @@ export function useRemoveItem() {
 
   return async (itemId: string) => {
     await window.api.item.remove(itemId);
-    xeate.set('items', window.api.item.getAll());
+
+    xeate.setMulti({
+      activeItemId: (value) => {
+        if (value !== itemId) return value;
+
+        const items = xeate.current.items;
+        const index = items.findIndex((x) => x.id === itemId);
+        const inc = index < items.length - 1 ? 1 : -1;
+        const nextIndex = Math.min(index + inc, items.length - 1);
+
+        return items[nextIndex]?.id || '';
+      },
+      items: await window.api.item.getAll(),
+    });
   };
 }
 

@@ -22,13 +22,14 @@ import {
   Flexible,
 } from '~/renderer/screens/shared/layout';
 import Divider from '~/renderer/screens/shared/divider';
-import { Plus, PlusCircle, PlusBox } from 'mdi-material-ui';
+import { Plus, PlusCircle, PlusBox, Close } from 'mdi-material-ui';
 import * as monaco from 'monaco-editor';
 import Editor, { loader } from '@monaco-editor/react';
 import MainScreenProvider, {
   useMainScreenXeate,
   useAddNewItem,
   useUpdateItem,
+  useRemoveItem,
   useActiveItem,
 } from './provider';
 
@@ -199,6 +200,15 @@ function XListItem({ label, item, selected, onClick }: XListItemProps) {
           '&::before': {
             opacity: 1,
           },
+          ...when(!editMode, {
+            '.icon': {
+              opacity: 0,
+            },
+            '.remove': {
+              display: 'block',
+              opacity: 1,
+            },
+          }),
         },
         '&::before': {
           content: '""',
@@ -213,22 +223,17 @@ function XListItem({ label, item, selected, onClick }: XListItemProps) {
         },
       }}
     >
-      {item.emoji ? (
-        <Typography dangerouslySetInnerHTML={{ __html: item.emoji }} />
-      ) : (
-        <Box
-          width={20}
-          height={20}
-          borderRadius="50%"
-          bgcolor={tint}
-          flexShrink={0}
-        />
-      )}
+      <Box position="relative" flexShrink={0}>
+        <ItemIcon className="icon" item={item} tint={tint} />
+        <ItemRemoveButton className="remove" item={item} />
+      </Box>
       {!editMode && (
         <Typography
           color="inherit"
           sx={{ WebkitUserSelect: 'none' }}
           onDoubleClick={() => setEditMode(true)}
+          title={item.name.length > 16 ? item.name : undefined}
+          noWrap
         >
           {item.name}
         </Typography>
@@ -245,6 +250,65 @@ function XListItem({ label, item, selected, onClick }: XListItemProps) {
         />
       )}
     </Row>
+  );
+}
+
+function when(condition: boolean, value: any) {
+  return condition ? value : undefined;
+}
+
+type ItemIconProps = BoxProps & {
+  item: Item;
+  tint: string;
+};
+
+function ItemIcon({ item, tint, ...props }: ItemIconProps) {
+  if (item.emoji) {
+    return (
+      <Box {...props}>
+        <Typography dangerouslySetInnerHTML={{ __html: item.emoji }} />
+      </Box>
+    );
+  }
+
+  return (
+    <Box
+      {...props}
+      width={20}
+      height={20}
+      borderRadius="50%"
+      bgcolor={tint}
+      flexShrink={0}
+    />
+  );
+}
+
+type ItemRemoveButtonProps = BoxProps & {
+  item: Item;
+};
+
+function ItemRemoveButton({ item, ...props }: ItemRemoveButtonProps) {
+  const removeItem = useRemoveItem();
+
+  function handleClick(e: MouseEvent<unknown>) {
+    e.stopPropagation();
+
+    void removeItem(item.id);
+  }
+
+  return (
+    <Box
+      {...props}
+      display="none"
+      position="absolute"
+      top="50%"
+      left="50%"
+      sx={{ transform: 'translate(-50%, -50%)', ...props.sx }}
+    >
+      <IconButton size="small" onClick={handleClick}>
+        <Close sx={{ fontSize: '1.1rem' }} />
+      </IconButton>
+    </Box>
   );
 }
 
@@ -318,7 +382,10 @@ function ItemContentSection() {
         >
           <Typography variant="body2">Untitled 1</Typography>
         </Row>
-        <IconButton size="small" sx={{ ml: 'auto', WebkitAppRegion: 'no-drag' }}>
+        <IconButton
+          size="small"
+          sx={{ ml: 'auto', WebkitAppRegion: 'no-drag' }}
+        >
           <PlusCircle fontSize="small" />
         </IconButton>
       </AppBarDelegate>
