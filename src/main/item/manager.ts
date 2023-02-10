@@ -82,7 +82,7 @@ class ItemManager {
       throw new Error(`item does not exist`);
     }
 
-    return fs.promise
+    return fs.promises
       .readFile(item.filePath)
       .then((buffer) => buffer.toString());
   }
