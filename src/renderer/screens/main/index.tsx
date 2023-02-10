@@ -1,6 +1,7 @@
 import { colord } from 'colord';
 import ScrollBox from '~/renderer/screens/shared/scroll-box';
 import _get from 'lodash/get';
+import _debounce from 'lodash/debounce';
 import {
   alpha,
   lighten,
@@ -28,6 +29,7 @@ import MainScreenProvider, {
   useMainScreenXeate,
   useAddNewItem,
   useUpdateItem,
+  useActiveItem,
 } from './provider';
 
 loader.config({ monaco });
@@ -43,28 +45,7 @@ function MainScreen() {
         <AppBar />
         <Row width={1} height={1}>
           <ItemListSection />
-          <Column flex={1}>
-            <AppBarDelegate flexShrink={0} />
-            <Editor
-              defaultLanguage="text/plain"
-              defaultValue=""
-              options={{
-                glyphMargin: false,
-                // fontFamily: 'Times-Roman',
-                fontSize: 14,
-                lineNumbersMinChars: 3,
-                lineDecorationsWidth: 0,
-                wordWrap: 'on',
-                wrappingIndent: 'same',
-                lineNumbers: true,
-                codeLens: false,
-                minimap: { enabled: false },
-                // renderFinalNewline: true,
-                // renderIndentGuides: true,
-                renderLineHighlight: 'all',
-              }}
-            />
-          </Column>
+          <ItemContentSection />
         </Row>
       </Screen>
     </MainScreenProvider>
@@ -161,7 +142,11 @@ function XListItem({ label, item, selected, onClick }: XListItemProps) {
 
   const updateItem = useUpdateItem();
   const c = useThemeColor();
-  const tint = editMode ? c('warning.main', { a: 0.75 }) : selected ? c('primary.main') : c('text.secondary');
+  const tint = editMode
+    ? c('warning.main', { a: 0.75 })
+    : selected
+    ? c('primary.main')
+    : c('text.secondary');
 
   function handleInputKeyDown(e: KeyboardEvent<unknown>) {
     if (e.key === 'Enter') {
@@ -180,7 +165,7 @@ function XListItem({ label, item, selected, onClick }: XListItemProps) {
     // don't lose focus if input is empty
     if (draftItemName.trim().length === 0) {
       e.target.focus();
-      return; 
+      return;
     }
 
     updateItemNameAndExitEditMode();
@@ -248,7 +233,7 @@ function XListItem({ label, item, selected, onClick }: XListItemProps) {
       {editMode && (
         <InputBase
           value={draftItemName}
-          onChange={e => setDraftItemName(e.target.value)}
+          onChange={(e) => setDraftItemName(e.target.value)}
           onBlur={handleInputBlur}
           inputProps={{ style: { padding: 0, height: 'unset' } }}
           onKeyDown={handleInputKeyDown}
@@ -257,6 +242,72 @@ function XListItem({ label, item, selected, onClick }: XListItemProps) {
         />
       )}
     </Row>
+  );
+}
+
+function ItemContentSection() {
+  const pendingContentRef = React.useRef<string>('');
+  const editorRef = React.useRef<any>();
+  const [content, setContent] = React.useState('');
+
+  const item = useActiveItem();
+
+  React.useEffect(() => {
+    if (item) {
+      window.api.item.getContent(item.id).then((content) => {
+        if (!editorRef.current) {
+          pendingContentRef.current = content;
+        } else {
+          editorRef.current.setValue(content);
+          pendingContentRef.current = '';
+        }
+      });
+    }
+  }, [item]);
+
+  function handleEditorMount(editor: any) {
+    editorRef.current = editor;
+
+    if (pendingContentRef.current) {
+      editorRef.current.setValue(pendingContentRef.current);
+      pendingContentRef.current = '';
+    }
+  }
+
+  function handleEditorChange(value: string) {
+    if (item) autoSave(item.id, value);
+  }
+
+  const autoSave = _debounce((itemId: string, value: string) => {
+    window.api.item.update(itemId, { content: value });
+  }, 1000);
+
+  return (
+    <Column flex={1}>
+      <AppBarDelegate flexShrink={0} />
+      <Editor
+        defaultLanguage="text/plain"
+        defaultValue=""
+        onMount={handleEditorMount}
+        onChange={handleEditorChange}
+        path={item?.filePath || ''}
+        options={{
+          glyphMargin: false,
+          // fontFamily: 'Times-Roman',
+          fontSize: 14,
+          lineNumbersMinChars: 3,
+          lineDecorationsWidth: 0,
+          wordWrap: 'on',
+          wrappingIndent: 'same',
+          lineNumbers: true,
+          codeLens: false,
+          minimap: { enabled: false },
+          // renderFinalNewline: true,
+          // renderIndentGuides: true,
+          renderLineHighlight: 'all',
+        }}
+      />
+    </Column>
   );
 }
 

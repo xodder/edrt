@@ -50,6 +50,20 @@ function UpdateXeate() {
   }, [itemCount]);
 }
 
+export function useActiveItem() {
+  const xeate = useXeate();
+  const items = xeate.get('items') as typeof xeate.current.items;
+  const activeItemId = xeate.get(
+    'activeItemId'
+  ) as typeof xeate.current.activeItemId;
+
+  if (!activeItemId) {
+    return undefined;
+  }
+
+  return items.find((item) => item.id === activeItemId);
+}
+
 export function useAddNewItem() {
   const xeate = useXeate();
   const autoSelectNewItem = true;

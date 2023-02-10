@@ -21,7 +21,7 @@ class ItemManager {
   root: string;
 
   constructor() {
-    this.root = app.getPath('temp');
+    this.root = app.getPath('userData');
   }
 
   getAll() {
