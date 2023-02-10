@@ -22,7 +22,7 @@ import {
   Flexible,
 } from '~/renderer/screens/shared/layout';
 import Divider from '~/renderer/screens/shared/divider';
-import { Plus, PlusCircle } from 'mdi-material-ui';
+import { Plus, PlusCircle, PlusBox } from 'mdi-material-ui';
 import * as monaco from 'monaco-editor';
 import Editor, { loader } from '@monaco-editor/react';
 import MainScreenProvider, {
@@ -287,7 +287,41 @@ function ItemContentSection() {
 
   return (
     <Column flex={1}>
-      <AppBarDelegate flexShrink={0} />
+      <AppBarDelegate
+        component={Row}
+        crossAxisAlignment="center"
+        px={1}
+        divider={<Divider height={16} color="grey.200" vertical />}
+        flexShrink={0}
+      >
+        <Row
+          crossAxisAlignment="center"
+          px={2}
+          height={1}
+          gap={0.5}
+          sx={{
+            position: 'relative',
+            color: 'text.primary',
+            '&::after': {
+              content: "''",
+              position: 'absolute',
+              left: '50%',
+              top: 0,
+              height: 3,
+              width: '100%',
+              borderRadius: '0 0 4px 4px',
+              transform: 'translateX(-50%)',
+              bgcolor: 'text.secondary',
+            },
+            WebkitUserSelect: 'none',
+          }}
+        >
+          <Typography variant="body2">Untitled 1</Typography>
+        </Row>
+        <IconButton size="small" sx={{ ml: 'auto', WebkitAppRegion: 'no-drag' }}>
+          <PlusCircle fontSize="small" />
+        </IconButton>
+      </AppBarDelegate>
       <Editor
         defaultLanguage="text/plain"
         defaultValue=""
