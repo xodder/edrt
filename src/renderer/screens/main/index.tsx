@@ -196,6 +196,9 @@ function XListItem({ label, item, selected, onClick }: XListItemProps) {
         cursor: 'pointer',
         '&:hover': {
           color: !selected ? 'text.primary' : undefined,
+          '&::before': {
+            opacity: 1,
+          },
         },
         '&::before': {
           content: '""',
