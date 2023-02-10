@@ -313,13 +313,14 @@ function ItemContentSection() {
 
 function useSetMonacoTheme() {
   const theme = useTheme();
+  const themeMode = theme.palette.mode;
   const c = useThemeColor();
 
   React.useEffect(() => {
-    const id = 'xtheme'; //Math.round(Math.random() * 1000).toString();
+    const id = `theme-${themeMode}`; //Math.round(Math.random() * 1000).toString();
 
     monaco.editor.defineTheme(id, {
-      base: theme.palette.mode === 'dark' ? 'vs-dark' : 'vs',
+      base: themeMode === 'dark' ? 'vs-dark' : 'vs',
       inherit: true,
       rules: [
         {
@@ -350,8 +351,8 @@ function useSetMonacoTheme() {
       },
     });
 
-    monaco.editor.setTheme(id);
-  });
+    setTimeout(() => monaco.editor.setTheme(id), 500);
+  }, [themeMode]);
 }
 
 function useThemeColor() {
