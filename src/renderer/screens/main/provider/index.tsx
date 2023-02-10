@@ -39,9 +39,9 @@ function UpdateXeate() {
       if (!items.length) {
         items = [await window.api.item.new()];
       } else {
-        items.forEach(item => {
+        items.forEach((item) => {
           // void window.api.item.remove(item.id);
-        })
+        });
       }
 
       xeate.setMulti({
@@ -85,9 +85,16 @@ export function useAddNewItem() {
 export function useUpdateItem() {
   const xeate = useXeate();
 
-  return async (itemId: string, updates: Partial<Item>) => {
+  return async (
+    itemId: string,
+    updates: Partial<Item>,
+    refreshState: boolean = true
+  ) => {
     await window.api.item.update(itemId, updates);
-    xeate.set('items', await window.api.item.getAll());
+
+    if (refreshState) {
+      xeate.set('items', await window.api.item.getAll());
+    }
   };
 }
 
@@ -110,6 +117,23 @@ export function useRemoveItem() {
       },
       items: await window.api.item.getAll(),
     });
+  };
+}
+
+export function useMoveItemInState() {
+  const xeate = useXeate();
+
+  return (itemId: string, toIndex: number) => {
+    const items = xeate.current.items;
+    const fromIndex = items.findIndex((x) => x.id === itemId);
+
+    let updated = [...items];
+
+    updated.splice(fromIndex, 1);
+    updated.splice(toIndex, 0, items[fromIndex]);
+    updated = updated.map((item, index) => ({ ...item, index }));
+
+    xeate.set('items', updated);
   };
 }
 

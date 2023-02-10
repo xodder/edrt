@@ -32,6 +32,7 @@ import MainScreenProvider, {
   useUpdateItem,
   useRemoveItem,
   useActiveItem,
+  useMoveItemInState,
 } from './provider';
 
 loader.config({ monaco });
@@ -269,20 +270,7 @@ function useItemDragAndDrop(
   enabled: boolean
 ) {
   const xeate = useMainScreenXeate();
-
-  function moveItem(itemId: string, toIndex: number) {
-    xeate.set('items', (items) => {
-      const fromIndex = items.findIndex((x) => x.id === itemId);
-
-      let updated = [...items];
-
-      updated.splice(fromIndex, 1);
-      updated.splice(toIndex, 0, items[fromIndex]);
-      updated = updated.map((item, index) => ({ ...item, index }));
-
-      return updated;
-    });
-  }
+  const moveItemInState = useMoveItemInState();
 
   const [{ isDragging }, drag] = useDrag(
     () => ({
@@ -294,11 +282,13 @@ function useItemDragAndDrop(
       }),
       end: (droppedItem, monitor) => {
         if (!monitor.didDrop()) {
-          moveItem(droppedItem.id, droppedItem.index);
+          // go back to original position,
+          // since the drop was done outside the container
+          moveItemInState(droppedItem.id, droppedItem.index);
         }
       },
     }),
-    [item, moveItem]
+    [item, moveItemInState]
   );
 
   const [{ isOver }, drop] = useDrop(
@@ -306,12 +296,16 @@ function useItemDragAndDrop(
       accept: 'item',
       hover: (draggedItem) => {
         if (draggedItem.id !== item.id) {
-          moveItem(draggedItem.id, item.index);
+          moveItemInState(draggedItem.id, item.index);
         }
       },
       collect: (monitor) => ({ isOver: monitor.isOver() }),
+      drop: () => {
+        // push updates to backend
+        void window.api.item.updateAll(xeate.current.items);
+      },
     }),
-    [item]
+    [item, moveItemInState]
   );
 
   drag(drop(elRef));
@@ -381,30 +375,41 @@ function ItemRemoveButton({ item, ...props }: ItemRemoveButtonProps) {
 function ItemContentSection() {
   const pendingContentRef = React.useRef<string>('');
   const editorRef = React.useRef<any>();
-  const [content, setContent] = React.useState('');
+  const updateItem = useUpdateItem();
 
   const item = useActiveItem();
 
   React.useEffect(() => {
-    if (item) {
-      window.api.item.getContent(item.id).then((content) => {
-        if (!editorRef.current) {
-          pendingContentRef.current = content;
-        } else {
-          editorRef.current.setValue(content);
-          pendingContentRef.current = '';
+    async function init() {
+      if (item?.id) {
+        const hasContent = !!editorRef.current?.getValue();
+
+        if (!hasContent) {
+          const content = await window.api.item.getContent(item.id);
+
+          if (editorRef.current) {
+            editorRef.current.setValue(content);
+          } else {
+            pendingContentRef.current = content;
+          }
         }
-      });
+
+        editorRef.current?.focus();
+      }
     }
-  }, [item]);
+
+    void init();
+  }, [item?.id]);
 
   function handleEditorMount(editor: any) {
     editorRef.current = editor;
 
     if (pendingContentRef.current) {
-      editorRef.current.setValue(pendingContentRef.current);
+      editor.setValue(pendingContentRef.current);
       pendingContentRef.current = '';
     }
+
+    editor.focus();
   }
 
   function handleEditorChange(value: string) {
@@ -412,7 +417,7 @@ function ItemContentSection() {
   }
 
   const autoSave = _debounce((itemId: string, value: string) => {
-    window.api.item.update(itemId, { content: value });
+    void updateItem(itemId, { content: value });
   }, 1000);
 
   return (

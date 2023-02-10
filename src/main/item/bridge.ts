@@ -12,6 +12,8 @@ class ItemManagerBridge {
     switch (method) {
       case 'getAll':
         return manager.getAll();
+      case 'updateAll':
+        return manager.updateAll(...args);
       case 'new':
         return manager.new();
       case 'update':

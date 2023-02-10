@@ -28,6 +28,10 @@ class ItemManager {
     return store.get('items', []);
   }
 
+  updateAll(items: Item[]) {
+    store.set('items', items || []);
+  }
+
   async new() {
     const items = this.getAll();
     const index = items
