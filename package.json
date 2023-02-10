@@ -26,6 +26,7 @@
     "@vscode/vscode-languagedetection": "^1.0.22",
     "colord": "^2.9.3",
     "electron-squirrel-startup": "^1.0.0",
+    "electron-store": "^8.1.0",
     "lodash": "^4.17.21",
     "mdi-material-ui": "^7.6.0",
     "monaco-editor": "^0.34.1",
