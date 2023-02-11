@@ -139,6 +139,7 @@ type XListItemProps = {
 
 function XListItem({ label, item, selected, onClick }: XListItemProps) {
   const ref = React.useRef<HTMLDivElement | undefined>();
+
   const [editMode, setEditMode] = React.useState(false);
   const [draftItemName, setDraftItemName] = React.useState(item.name);
   const { isDragging, isOver } = useItemDragAndDrop(ref, item, !editMode);
@@ -370,6 +371,9 @@ function ItemRemoveButton({ item, ...props }: ItemRemoveButtonProps) {
   );
 }
 
+const EDITOR_HEADER_HEIGHT = APPBAR_HEIGHT;
+const EDITOR_FOOTER_HEIGHT = 24;
+
 function ItemContentSection() {
   const disposablesRef = React.useRef<{ dispose: () => void }[]>([]);
   const pendingContentRef = React.useRef<string>('');
@@ -396,6 +400,7 @@ function ItemContentSection() {
     };
   }, []);
 
+  // handle item content loading
   React.useEffect(() => {
     async function init() {
       if (item?.id) {
@@ -428,11 +433,15 @@ function ItemContentSection() {
   }, [item?.id]);
 
   function handleEditorMount(editor: any) {
+    console.log(editor);
     editorRef.current = editor;
 
     disposablesRef.current.push(
       // autosave when cursor position changes
       editor.onDidChangeCursorPosition((data: any) => {
+        const lineCount = (editor._modelData.model.getLineCount());
+        const position = data.position;
+
         if (!['model', 'restoreState'].includes(data.source)) {
           if (itemRef.current) {
             autoSave(itemRef.current.id);
@@ -466,47 +475,13 @@ function ItemContentSection() {
 
   return (
     <Column flex={1}>
-      <AppBarDelegate
-        component={Row}
-        crossAxisAlignment="center"
-        px={1}
-        divider={<Divider height={16} color="grey.200" vertical />}
-        flexShrink={0}
-      >
-        <Row
-          crossAxisAlignment="center"
-          px={2}
-          height={1}
-          gap={0.5}
-          sx={{
-            position: 'relative',
-            color: 'text.primary',
-            '&::after': {
-              content: "''",
-              position: 'absolute',
-              left: '50%',
-              top: 0,
-              height: 3,
-              width: '100%',
-              borderRadius: '0 0 4px 4px',
-              transform: 'translateX(-50%)',
-              bgcolor: 'text.secondary',
-            },
-            WebkitUserSelect: 'none',
-          }}
-        >
-          <Typography variant="body2">Untitled 1</Typography>
-        </Row>
-        <IconButton
-          size="small"
-          sx={{ ml: 'auto', WebkitAppRegion: 'no-drag' }}
-        >
-          <PlusCircle fontSize="small" />
-        </IconButton>
-      </AppBarDelegate>
+      <EditorHeader />
       <Editor
         defaultLanguage="text/plain"
         defaultValue=""
+        height={`calc(100% - ${
+          EDITOR_HEADER_HEIGHT + EDITOR_FOOTER_HEIGHT
+        }px)`}
         theme={editorTheme}
         onMount={handleEditorMount}
         onChange={handleEditorChange}
@@ -527,7 +502,67 @@ function ItemContentSection() {
           renderLineHighlight: 'all',
         }}
       />
+      <EditorFooter />
     </Column>
+  );
+}
+
+function EditorHeader() {
+  return (
+    <AppBarDelegate
+      component={Row}
+      crossAxisAlignment="center"
+      px={1}
+      divider={<Divider height={16} color="grey.200" vertical />}
+      flexShrink={0}
+    >
+      <EditorToolbarItem />
+      <IconButton size="small" sx={{ ml: 'auto', WebkitAppRegion: 'no-drag' }}>
+        <PlusCircle fontSize="small" />
+      </IconButton>
+    </AppBarDelegate>
+  );
+}
+
+function EditorToolbarItem() {
+  return (
+    <Row
+      crossAxisAlignment="center"
+      px={2}
+      height={1}
+      gap={0.5}
+      sx={{
+        position: 'relative',
+        color: 'text.primary',
+        '&::after': {
+          content: "''",
+          position: 'absolute',
+          left: '50%',
+          top: 0,
+          height: 3,
+          width: '100%',
+          borderRadius: '0 0 4px 4px',
+          transform: 'translateX(-50%)',
+          bgcolor: 'text.secondary',
+        },
+        WebkitUserSelect: 'none',
+      }}
+    >
+      <Typography variant="body2">Untitled 1</Typography>
+    </Row>
+  );
+}
+
+function EditorFooter() {
+  const c = useThemeColor();
+
+  return (
+    <Row
+      height={EDITOR_FOOTER_HEIGHT}
+      width={1}
+      bgcolor={c('error.main')}
+      flexShrink={0}
+    ></Row>
   );
 }
 
