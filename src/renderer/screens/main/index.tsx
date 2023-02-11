@@ -22,6 +22,7 @@ import {
   Flexible,
 } from '~/renderer/screens/shared/layout';
 import Divider from '~/renderer/screens/shared/divider';
+import isNonNull from '~/shared/utils/is-non-null';
 import { Plus, PlusCircle, PlusBox, Close } from 'mdi-material-ui';
 import { useDrag, useDrop } from 'react-dnd';
 import * as monaco from 'monaco-editor';
@@ -570,7 +571,7 @@ function filtered<T extends Record<string, unknown>>(object: T) {
   return Object.keys(object).reduce<T>((acc, key) => {
     const value = object[key];
 
-    if (value !== undefined && value !== null) {
+    if (isNonNull(value)) {
       acc[key] = value;
     }
 
