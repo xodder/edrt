@@ -4,6 +4,7 @@ import path from 'path';
 import { app } from 'electron';
 import Store from 'electron-store';
 import genStr from '~/shared/utils/generate-random-str';
+import isNonNull from '~/shared/utils/is-non-null';
 import { ModelOperations } from '@vscode/vscode-languagedetection';
 
 const modelRootPath = path.resolve(
@@ -94,10 +95,10 @@ class ItemManager {
     store.set(`items.${index}`, { ...item, ..._omit(updates, 'content') });
 
     // content
-    if (updates.content) {
+    if (isNonNull(updates.content)) {
       const result = await modelOperations.runModel(updates.content);
       console.log(result);
-      await fs.promises.writeFile(item.filePath, updates.content || '');
+      await fs.promises.writeFile(item.filePath, updates.content);
     }
 
     return store.get(`items.${index}`);
