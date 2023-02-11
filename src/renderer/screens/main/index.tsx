@@ -373,11 +373,29 @@ function ItemRemoveButton({ item, ...props }: ItemRemoveButtonProps) {
 }
 
 function ItemContentSection() {
+  const disposablesRef = React.useRef<{ dispose: () => void }[]>([]);
   const pendingContentRef = React.useRef<string>('');
   const editorRef = React.useRef<any>();
   const updateItem = useUpdateItem();
 
   const item = useActiveItem();
+
+  // using itemRef because apparently editor-on-mount handler uses stale item
+  // value, so introducing a reference version will allow us to always get the
+  // current value of item.
+  const itemRef = React.useRef<Item | undefined>(item);
+
+  React.useEffect(() => {
+    itemRef.current = item;
+  }, [item]);
+
+  // clear disposables
+  React.useEffect(() => {
+    return () => {
+      disposablesRef.current.forEach((disposable) => disposable.dispose());
+      disposablesRef.current = [];
+    };
+  }, []);
 
   React.useEffect(() => {
     async function init() {
@@ -394,18 +412,39 @@ function ItemContentSection() {
           }
         }
 
+        editorRef.current?.restoreViewState(item.editorState || {});
         editorRef.current?.focus();
       }
     }
 
     void init();
+
+    return () => {
+      if (item?.id) {
+        updateItem(item.id, {
+          editorState: editorRef.current.saveViewState(),
+        });
+      }
+    };
   }, [item?.id]);
 
   function handleEditorMount(editor: any) {
     editorRef.current = editor;
 
-    if (pendingContentRef.current) {
+    disposablesRef.current.push(
+      // autosave when cursor position changes
+      editor.onDidChangeCursorPosition((data: any) => {
+        if (!['model', 'restoreState'].includes(data.source)) {
+          if (itemRef.current) {
+            autoSave(itemRef.current.id);
+          }
+        }
+      })
+    );
+
+    if (!!pendingContentRef.current) {
       editor.setValue(pendingContentRef.current);
+      editor.restoreViewState(itemRef.current?.editorState || {});
       pendingContentRef.current = '';
     }
 
@@ -416,8 +455,14 @@ function ItemContentSection() {
     if (item) autoSave(item.id, value);
   }
 
-  const autoSave = _debounce((itemId: string, value: string) => {
-    void updateItem(itemId, { content: value });
+  const autoSave = _debounce((itemId: string, value?: string) => {
+    void updateItem(
+      itemId,
+      filtered({
+        content: value,
+        editorState: editorRef.current.saveViewState(),
+      })
+    );
   }, 1000);
 
   return (
@@ -484,6 +529,18 @@ function ItemContentSection() {
       />
     </Column>
   );
+}
+
+function filtered<T extends Record<string, unknown>>(object: T) {
+  return Object.keys(object).reduce<T>((acc, key) => {
+    const value = object[key];
+
+    if (value !== undefined && value !== null) {
+      acc[key] = value;
+    }
+
+    return acc;
+  }, {});
 }
 
 function useSetMonacoTheme() {
