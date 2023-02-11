@@ -40,8 +40,6 @@ loader.config({ monaco });
 const APPBAR_HEIGHT = 48;
 
 function MainScreen() {
-  useSetMonacoTheme();
-
   return (
     <MainScreenProvider>
       <Screen>
@@ -377,6 +375,7 @@ function ItemContentSection() {
   const pendingContentRef = React.useRef<string>('');
   const editorRef = React.useRef<any>();
   const updateItem = useUpdateItem();
+  const editorTheme = useEditorTheme();
 
   const item = useActiveItem();
 
@@ -508,6 +507,7 @@ function ItemContentSection() {
       <Editor
         defaultLanguage="text/plain"
         defaultValue=""
+        theme={editorTheme}
         onMount={handleEditorMount}
         onChange={handleEditorChange}
         path={item?.filePath || ''}
@@ -543,15 +543,15 @@ function filtered<T extends Record<string, unknown>>(object: T) {
   }, {});
 }
 
-function useSetMonacoTheme() {
+function useEditorTheme() {
   const theme = useTheme();
   const themeMode = theme.palette.mode;
+  const themeId = `theme-${themeMode}`;
+
   const c = useThemeColor();
 
   React.useEffect(() => {
-    const id = `theme-${themeMode}`; //Math.round(Math.random() * 1000).toString();
-
-    monaco.editor.defineTheme(id, {
+    monaco.editor.defineTheme(themeId, {
       base: themeMode === 'dark' ? 'vs-dark' : 'vs',
       inherit: true,
       rules: [
@@ -582,9 +582,9 @@ function useSetMonacoTheme() {
         //
       },
     });
+  }, [themeId, themeMode]);
 
-    setTimeout(() => monaco.editor.setTheme(id), 500);
-  }, [themeMode]);
+  return themeId;
 }
 
 function useThemeColor() {
