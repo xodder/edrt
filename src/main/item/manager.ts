@@ -4,6 +4,27 @@ import path from 'path';
 import { app } from 'electron';
 import Store from 'electron-store';
 import genStr from '~/shared/utils/generate-random-str';
+import { ModelOperations } from '@vscode/vscode-languagedetection';
+
+const modelRootPath = path.resolve(
+  'node_modules',
+  '@vscode',
+  'vscode-languagedetection',
+  'model'
+);
+
+const modelOperations = new ModelOperations({
+  modelJsonLoaderFunc: async () => {
+    return fs.promises
+      .readFile(path.resolve(modelRootPath, 'model.json'))
+      .then((data) => JSON.parse(data.toString()));
+  },
+  weightsLoaderFunc: async () => {
+    return fs.promises
+      .readFile(path.resolve(modelRootPath, 'group1-shard1of1.bin'))
+      .then((data) => data.buffer);
+  },
+});
 
 const store = new Store();
 
@@ -74,6 +95,8 @@ class ItemManager {
 
     // content
     if (updates.content) {
+      const result = await modelOperations.runModel(updates.content);
+      console.log(result);
       await fs.promises.writeFile(item.filePath, updates.content || '');
     }
 
