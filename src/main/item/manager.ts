@@ -5,27 +5,7 @@ import { app } from 'electron';
 import Store from 'electron-store';
 import genStr from '~/shared/utils/generate-random-str';
 import isNonNull from '~/shared/utils/is-non-null';
-import { ModelOperations } from '@vscode/vscode-languagedetection';
-
-const modelRootPath = path.resolve(
-  'node_modules',
-  '@vscode',
-  'vscode-languagedetection',
-  'model'
-);
-
-const modelOperations = new ModelOperations({
-  modelJsonLoaderFunc: async () => {
-    return fs.promises
-      .readFile(path.resolve(modelRootPath, 'model.json'))
-      .then((data) => JSON.parse(data.toString()));
-  },
-  weightsLoaderFunc: async () => {
-    return fs.promises
-      .readFile(path.resolve(modelRootPath, 'group1-shard1of1.bin'))
-      .then((data) => data.buffer);
-  },
-});
+import detectLanguage from '~/main/utils/detect-language';
 
 const store = new Store();
 
@@ -91,15 +71,15 @@ class ItemManager {
 
     const item = items[index];
 
-    // this might be prevented
-    store.set(`items.${index}`, { ...item, ..._omit(updates, 'content') });
-
     // content
     if (isNonNull(updates.content)) {
-      const result = await modelOperations.runModel(updates.content);
-      console.log(result);
       await fs.promises.writeFile(item.filePath, updates.content);
+
+      updates.language = await detectLanguage(updates.content);
     }
+
+    // this might be prevented
+    store.set(`items.${index}`, { ...item, ..._omit(updates, 'content') });
 
     return store.get(`items.${index}`);
   }

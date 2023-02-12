@@ -1,11 +1,18 @@
 import React from 'react';
 import { makeXeate } from '~/renderer/utils/xeate';
+import * as monaco from 'monaco-editor/esm/vs/editor/editor.api';
 
 type MainScreenProviderProps = React.PropsWithChildren<unknown>;
 
 type MainScreenXeateValues = {
   activeItemId: string;
   items: Item[];
+  editorState: EditorState;
+};
+
+type EditorState = {
+  lineCount: number;
+  position: monaco.IPosition;
 };
 
 const [XeateProvider, useXeate] = makeXeate<MainScreenXeateValues>();
@@ -15,6 +22,10 @@ function MainScreenProvider({ children }: MainScreenProviderProps) {
     return {
       activeItemId: '',
       items: [], // window.api.item.getAll(), //load items from db
+      editorState: {
+        lineCount: 0,
+        position: { column: 0, lineNumber: 0 },
+      },
     };
   })();
 
@@ -135,6 +146,12 @@ export function useMoveItemInState() {
 
     xeate.set('items', updated);
   };
+}
+
+export function useEditorState() {
+  const xeate = useXeate();
+
+  return xeate.get('editorState') as EditorState;
 }
 
 export const useMainScreenXeate = useXeate;

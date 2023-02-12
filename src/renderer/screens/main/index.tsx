@@ -34,6 +34,7 @@ import MainScreenProvider, {
   useRemoveItem,
   useActiveItem,
   useMoveItemInState,
+  useEditorState,
 } from './provider';
 
 loader.config({ monaco });
@@ -373,9 +374,10 @@ function ItemRemoveButton({ item, ...props }: ItemRemoveButtonProps) {
 }
 
 const EDITOR_HEADER_HEIGHT = APPBAR_HEIGHT;
-const EDITOR_FOOTER_HEIGHT = 24;
+const EDITOR_FOOTER_HEIGHT = 30;
 
 function ItemContentSection() {
+  const xeate = useMainScreenXeate();
   const disposablesRef = React.useRef<{ dispose: () => void }[]>([]);
   const pendingContentRef = React.useRef<string>('');
   const editorRef = React.useRef<any>();
@@ -417,7 +419,7 @@ function ItemContentSection() {
           }
         }
 
-        editorRef.current?.restoreViewState(item.editorState || {});
+        editorRef.current?.restoreViewState(item.state || {});
         editorRef.current?.focus();
       }
     }
@@ -427,21 +429,32 @@ function ItemContentSection() {
     return () => {
       if (item?.id) {
         updateItem(item.id, {
-          editorState: editorRef.current.saveViewState(),
+          state: editorRef.current.saveViewState(),
         });
       }
     };
   }, [item?.id]);
 
+  function handleEditorBeforeMount(monaco: any) {
+    monaco.languages.typescript.javascriptDefaults.setCompilerOptions({
+      target: monaco.languages.typescript.ScriptTarget.Latest,
+      module: monaco.languages.typescript.ModuleKind.ES2015,
+      allowNonTsExtensions: true,
+      lib: ['es2018'],
+    });
+  }
+
   function handleEditorMount(editor: any) {
-    console.log(editor);
     editorRef.current = editor;
 
     disposablesRef.current.push(
       // autosave when cursor position changes
       editor.onDidChangeCursorPosition((data: any) => {
-        const lineCount = (editor._modelData.model.getLineCount());
+        const lineCount = editor._modelData.model.getLineCount();
         const position = data.position;
+        
+        // update editorState
+        xeate.set('editorState', (s) => ({ ...s, lineCount, position }));
 
         if (!['model', 'restoreState'].includes(data.source)) {
           if (itemRef.current) {
@@ -453,7 +466,7 @@ function ItemContentSection() {
 
     if (!!pendingContentRef.current) {
       editor.setValue(pendingContentRef.current);
-      editor.restoreViewState(itemRef.current?.editorState || {});
+      editor.restoreViewState(itemRef.current?.state || {});
       pendingContentRef.current = '';
     }
 
@@ -469,7 +482,7 @@ function ItemContentSection() {
       itemId,
       filtered({
         content: value,
-        editorState: editorRef.current.saveViewState(),
+        state: editorRef.current.saveViewState(),
       })
     );
   }, 1000);
@@ -478,15 +491,15 @@ function ItemContentSection() {
     <Column flex={1}>
       <EditorHeader />
       <Editor
-        defaultLanguage="text/plain"
-        defaultValue=""
+        language={item?.language || 'plaintext'}
         height={`calc(100% - ${
           EDITOR_HEADER_HEIGHT + EDITOR_FOOTER_HEIGHT
         }px)`}
         theme={editorTheme}
+        beforeMount={handleEditorBeforeMount}
         onMount={handleEditorMount}
         onChange={handleEditorChange}
-        path={item?.filePath || ''}
+        path={item?.id || ''}
         options={{
           glyphMargin: false,
           // fontFamily: 'Times-Roman',
@@ -497,6 +510,7 @@ function ItemContentSection() {
           wrappingIndent: 'same',
           lineNumbers: true,
           codeLens: false,
+          mouseWheelZoom: false,
           minimap: { enabled: false },
           // renderFinalNewline: true,
           // renderIndentGuides: true,
@@ -555,15 +569,31 @@ function EditorToolbarItem() {
 }
 
 function EditorFooter() {
+  const editorState = useEditorState();
+  const position = editorState.position;
+  const lineCoverage = Math.round((position.lineNumber / (editorState.lineCount || 1)) * 100);
+  const item = useActiveItem();
   const c = useThemeColor();
 
   return (
     <Row
+      crossAxisAlignment="center"
       height={EDITOR_FOOTER_HEIGHT}
       width={1}
-      bgcolor={c('error.main')}
+      bgcolor={c('background.default')}
       flexShrink={0}
-    ></Row>
+      px={3}
+      color="text.secondary"
+    >
+      <Flexible />
+      <Typography variant="body2">
+        {item?.language}
+      </Typography>
+      <Divider type="dotted" height={14} mx={3} vertical />
+      <Typography variant="body2">
+        {`Ln ${position.lineNumber}, Col ${position.column} ┊ ${editorState.lineCount}`}
+      </Typography>
+    </Row>
   );
 }
 
