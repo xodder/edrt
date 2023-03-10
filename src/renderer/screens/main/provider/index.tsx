@@ -1,6 +1,7 @@
-import React from 'react';
-import { makeXeate } from '~/renderer/utils/xeate';
 import * as monaco from 'monaco-editor/esm/vs/editor/editor.api';
+import React from 'react';
+import { Item } from '~/shared/types';
+import { makeXeate } from '~/renderer/utils/xeate';
 
 type MainScreenProviderProps = React.PropsWithChildren<unknown>;
 
@@ -18,16 +19,14 @@ type EditorState = {
 const [XeateProvider, useXeate] = makeXeate<MainScreenXeateValues>();
 
 function MainScreenProvider({ children }: MainScreenProviderProps) {
-  const initialValues: MainScreenXeateValues = (function () {
-    return {
-      activeItemId: '',
-      items: [], // window.api.item.getAll(), //load items from db
-      editorState: {
-        lineCount: 0,
-        position: { column: 0, lineNumber: 0 },
-      },
-    };
-  })();
+  const initialValues: MainScreenXeateValues = {
+    activeItemId: '',
+    items: [], // window.api.item.getAll(), //load items from db
+    editorState: {
+      lineCount: 0,
+      position: { column: 0, lineNumber: 0 },
+    },
+  };
 
   return (
     <XeateProvider initialValues={initialValues}>
@@ -37,7 +36,7 @@ function MainScreenProvider({ children }: MainScreenProviderProps) {
   );
 }
 
-function UpdateXeate() {
+function UpdateXeate(): JSX.Element {
   const xeate = useXeate();
   const items = xeate.get('items') as typeof xeate.current.items;
   const itemCount = items.length;
@@ -49,10 +48,6 @@ function UpdateXeate() {
       // add new item
       if (!items.length) {
         items = [await window.api.item.new()];
-      } else {
-        items.forEach((item) => {
-          // void window.api.item.remove(item.id);
-        });
       }
 
       xeate.setMulti({
@@ -63,6 +58,8 @@ function UpdateXeate() {
 
     if (itemCount === 0) init();
   }, [itemCount]);
+
+  return null;
 }
 
 export function useActiveItem() {
@@ -116,7 +113,7 @@ export function useRemoveItem() {
     await window.api.item.remove(itemId);
 
     xeate.setMulti({
-      activeItemId: (value) => {
+      activeItemId: (value: string) => {
         if (value !== itemId) return value;
 
         const items = xeate.current.items;

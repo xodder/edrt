@@ -6,8 +6,9 @@ import Store from 'electron-store';
 import genStr from '~/shared/utils/generate-random-str';
 import isNonNull from '~/shared/utils/is-non-null';
 import detectLanguage from '~/main/utils/detect-language';
+import { Item, UpdatableItem } from '~/shared/types';
 
-const store = new Store();
+const store = new Store<Item>();
 
 class ItemManager {
   private static instance: ItemManager | null;
@@ -26,7 +27,7 @@ class ItemManager {
     this.root = app.getPath('userData');
   }
 
-  getAll() {
+  getAll(): Item[] {
     return store.get('items', []);
   }
 

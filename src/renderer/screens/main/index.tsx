@@ -18,7 +18,7 @@ import Divider from '~/renderer/screens/shared/divider';
 import { Column, Flexible, Row } from '~/renderer/screens/shared/layout';
 import Screen from '~/renderer/screens/shared/screen';
 import ScrollBox from '~/renderer/screens/shared/scroll-box';
-import { Item } from '~/renderer/types';
+import { Item } from '~/shared/types';
 import isNonNull from '~/shared/utils/is-non-null';
 import MainScreenProvider, {
   useActiveItem,
