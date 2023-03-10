@@ -1,5 +1,4 @@
-import { CssBaseline, ThemeProvider, Button } from '@mui/material';
-import React from 'react';
+import { CssBaseline, ThemeProvider } from '@mui/material';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import Screens from './screens';

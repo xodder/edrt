@@ -1,40 +1,33 @@
-import { colord } from 'colord';
-import ScrollBox from '~/renderer/screens/shared/scroll-box';
-import _get from 'lodash/get';
-import _debounce from 'lodash/debounce';
+import Editor, { loader } from '@monaco-editor/react';
 import {
-  alpha,
-  lighten,
   Box,
-  Button,
-  Typography,
+  BoxProps,
   IconButton,
   InputBase,
+  Typography,
   useTheme,
 } from '@mui/material';
-import React from 'react';
-import Screen from '~/renderer/screens/shared/screen';
-import {
-  Column,
-  Row,
-  Center,
-  Spacer,
-  Flexible,
-} from '~/renderer/screens/shared/layout';
-import Divider from '~/renderer/screens/shared/divider';
-import isNonNull from '~/shared/utils/is-non-null';
-import { Plus, PlusCircle, PlusBox, Close } from 'mdi-material-ui';
-import { useDrag, useDrop } from 'react-dnd';
+import { colord } from 'colord';
+import _debounce from 'lodash/debounce';
+import _get from 'lodash/get';
+import { Close, Plus, PlusCircle } from 'mdi-material-ui';
 import * as monaco from 'monaco-editor';
-import Editor, { loader } from '@monaco-editor/react';
+import React from 'react';
+import { useDrag, useDrop } from 'react-dnd';
+import Divider from '~/renderer/screens/shared/divider';
+import { Column, Flexible, Row } from '~/renderer/screens/shared/layout';
+import Screen from '~/renderer/screens/shared/screen';
+import ScrollBox from '~/renderer/screens/shared/scroll-box';
+import { Item } from '~/renderer/types';
+import isNonNull from '~/shared/utils/is-non-null';
 import MainScreenProvider, {
-  useMainScreenXeate,
-  useAddNewItem,
-  useUpdateItem,
-  useRemoveItem,
   useActiveItem,
-  useMoveItemInState,
+  useAddNewItem,
   useEditorState,
+  useMainScreenXeate,
+  useMoveItemInState,
+  useRemoveItem,
+  useUpdateItem,
 } from './provider';
 
 loader.config({ monaco });
@@ -68,7 +61,7 @@ function AppBar() {
   );
 }
 
-function AppBarDelegate(props: BoxProps) {
+function AppBarDelegate<C extends React.ElementType>(props: BoxProps<C>) {
   return (
     <Box
       {...props}
@@ -79,7 +72,6 @@ function AppBarDelegate(props: BoxProps) {
 }
 
 function ItemListSection() {
-  const [selectedIndex, setSelectedIndex] = React.useState(0);
   const xeate = useMainScreenXeate();
   const items = xeate.get('items') as typeof xeate.current.items;
   const activeItemId = xeate.get('activeItemId');
@@ -103,7 +95,7 @@ function ItemListSection() {
         fillHeight
       >
         <Column height={1}>
-          {items.map((item, index) => (
+          {items.map((item) => (
             <XListItem
               key={item.id}
               item={item}
@@ -133,18 +125,17 @@ function NewItemButton() {
 }
 
 type XListItemProps = {
-  label: string;
   item: Item;
   selected: boolean;
   onClick: () => void;
 };
 
-function XListItem({ label, item, selected, onClick }: XListItemProps) {
+function XListItem({ item, selected, onClick }: XListItemProps) {
   const ref = React.useRef<HTMLDivElement | undefined>();
 
   const [editMode, setEditMode] = React.useState(false);
   const [draftItemName, setDraftItemName] = React.useState(item.name);
-  const { isDragging, isOver } = useItemDragAndDrop(ref, item, !editMode);
+  const { isDragging } = useItemDragAndDrop(ref, item, !editMode);
 
   const updateItem = useUpdateItem();
   const c = useThemeColor();
@@ -154,7 +145,7 @@ function XListItem({ label, item, selected, onClick }: XListItemProps) {
     ? 'primary.main'
     : 'text.secondary';
 
-  function handleInputKeyDown(e: KeyboardEvent<unknown>) {
+  function handleInputKeyDown(e: React.KeyboardEvent<HTMLElement>) {
     if (e.key === 'Enter') {
       updateItemNameAndExitEditMode();
     } else if (e.key === 'Escape') {
@@ -167,7 +158,7 @@ function XListItem({ label, item, selected, onClick }: XListItemProps) {
     setEditMode(false);
   }
 
-  function handleInputBlur(e: InputEvent<HTMLInputElement>) {
+  function handleInputBlur(e: React.FocusEvent<HTMLElement>) {
     // don't lose focus if input is empty
     if (draftItemName.trim().length === 0) {
       e.target.focus();
@@ -295,7 +286,7 @@ function useItemDragAndDrop(
   const [{ isOver }, drop] = useDrop(
     () => ({
       accept: 'item',
-      hover: (draggedItem) => {
+      hover: (draggedItem: { id: string }) => {
         if (draggedItem.id !== item.id) {
           moveItemInState(draggedItem.id, item.index);
         }
@@ -351,7 +342,7 @@ type ItemRemoveButtonProps = BoxProps & {
 function ItemRemoveButton({ item, ...props }: ItemRemoveButtonProps) {
   const removeItem = useRemoveItem();
 
-  function handleClick(e: MouseEvent<unknown>) {
+  function handleClick(e: React.MouseEvent<HTMLElement>) {
     e.stopPropagation();
 
     void removeItem(item.id);
@@ -452,9 +443,9 @@ function ItemContentSection() {
       editor.onDidChangeCursorPosition((data: any) => {
         const lineCount = editor._modelData.model.getLineCount();
         const position = data.position;
-        
+
         // update editorState
-        xeate.set('editorState', (s) => ({ ...s, lineCount, position }));
+        xeate.set('editorState', (s: any) => ({ ...s, lineCount, position }));
 
         if (!['model', 'restoreState'].includes(data.source)) {
           if (itemRef.current) {
@@ -492,9 +483,7 @@ function ItemContentSection() {
       <EditorHeader />
       <Editor
         language={item?.language || 'plaintext'}
-        height={`calc(100% - ${
-          EDITOR_HEADER_HEIGHT + EDITOR_FOOTER_HEIGHT
-        }px)`}
+        height={`calc(100% - ${EDITOR_HEADER_HEIGHT + EDITOR_FOOTER_HEIGHT}px)`}
         theme={editorTheme}
         beforeMount={handleEditorBeforeMount}
         onMount={handleEditorMount}
@@ -508,7 +497,7 @@ function ItemContentSection() {
           lineDecorationsWidth: 0,
           wordWrap: 'on',
           wrappingIndent: 'same',
-          lineNumbers: true,
+          lineNumbers: 'on',
           codeLens: false,
           mouseWheelZoom: false,
           minimap: { enabled: false },
@@ -571,7 +560,6 @@ function EditorToolbarItem() {
 function EditorFooter() {
   const editorState = useEditorState();
   const position = editorState.position;
-  const lineCoverage = Math.round((position.lineNumber / (editorState.lineCount || 1)) * 100);
   const item = useActiveItem();
   const c = useThemeColor();
 
@@ -586,9 +574,7 @@ function EditorFooter() {
       color="text.secondary"
     >
       <Flexible />
-      <Typography variant="body2">
-        {item?.language}
-      </Typography>
+      <Typography variant="body2">{item?.language}</Typography>
       <Divider type="dotted" height={14} mx={3} vertical />
       <Typography variant="body2">
         {`Ln ${position.lineNumber}, Col ${position.column} ┊ ${editorState.lineCount}`}
@@ -602,11 +588,11 @@ function filtered<T extends Record<string, unknown>>(object: T) {
     const value = object[key];
 
     if (isNonNull(value)) {
-      acc[key] = value;
+      return { ...acc, [key]: value };
     }
 
     return acc;
-  }, {});
+  }, {} as any);
 }
 
 function useEditorTheme() {
@@ -622,6 +608,7 @@ function useEditorTheme() {
       inherit: true,
       rules: [
         {
+          token: undefined,
           background: c('background.default'), // 'EDF9FA',
           // fontStyle: '',
           // foreground: '',
@@ -653,10 +640,16 @@ function useEditorTheme() {
   return themeId;
 }
 
+type ThemeColorConfig = Partial<{
+  a: number;
+  d: number;
+  l: number;
+}>;
+
 function useThemeColor() {
   const theme = useTheme();
 
-  return (key: string, config: { a: number; d: number; l: number } = {}) => {
+  return (key: string, config: ThemeColorConfig = {}) => {
     const color = _get(theme.palette, key);
 
     if (!color) return undefined;

@@ -72,15 +72,15 @@ const gotTheLock = app.requestSingleInstanceLock();
 
 // GUARD: Check if we're the only instance of the app running
 if (!gotTheLock) {
-    app.quit();
+  app.quit();
 } else {
-    app.on('second-instance', () => {
-        // Someone tried to run a second instance, we should focus our window.
-        if (mainWindow) {
-            if (mainWindow.isMinimized()) mainWindow.restore();
-            mainWindow.focus();
-        }
-    });
+  app.on('second-instance', () => {
+    // Someone tried to run a second instance, we should focus our window.
+    if (mainWindow) {
+      if (mainWindow.isMinimized()) mainWindow.restore();
+      mainWindow.focus();
+    }
+  });
 }
 
 // In this file you can include the rest of your app's specific main process
