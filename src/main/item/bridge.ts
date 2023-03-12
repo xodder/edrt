@@ -3,15 +3,12 @@ import ItemManager from './manager';
 
 class ItemManagerBridge {
   static init() {
-    console.log('initialized item');
     ipcMain.handle('item', this.handleRequest);
   }
 
   private static handleRequest(_: IpcMainInvokeEvent, method: string, ...args: unknown[]): unknown {
     const manager = ItemManager.getInstance();
 
-    console.log('called a method: %s', method);
-   
     switch (method) {
       case 'getAll':
         return manager.getAll();
