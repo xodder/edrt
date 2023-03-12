@@ -4,6 +4,7 @@ export type Item = {
   index: number;
   emoji?: string;
   state?: any;
+  language?: string;
   filePath?: string;
 };
 

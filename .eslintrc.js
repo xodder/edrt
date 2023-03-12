@@ -6,15 +6,7 @@ module.exports = {
   },
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint', 'prettier'],
-  extends: [
-    'eslint:recommended',
-    'prettier',
-    'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:import/recommended',
-    'plugin:import/electron',
-    'plugin:import/typescript',
-  ],
+  extends: ['eslint:recommended', 'plugin:import/electron', 'prettier'],
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
@@ -40,7 +32,6 @@ module.exports = {
   ],
   rules: {
     'prettier/prettier': 'error',
-    'react/jsx-no-undef': ['error', { allowGlobals: false }],
     'react/no-unescaped-entities': 'off',
   },
   globals: {

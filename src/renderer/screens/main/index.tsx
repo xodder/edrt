@@ -1,4 +1,5 @@
-import Editor, { loader } from '@monaco-editor/react';
+/* eslint-disable no-irregular-whitespace */
+import Editor, { loader, Monaco } from '@monaco-editor/react';
 import {
   Box,
   BoxProps,
@@ -10,7 +11,7 @@ import {
 import { colord } from 'colord';
 import _debounce from 'lodash/debounce';
 import _get from 'lodash/get';
-import { Close, Plus, PlusCircle } from 'mdi-material-ui';
+import { Close, Plus } from 'mdi-material-ui';
 import * as monaco from 'monaco-editor';
 import React from 'react';
 import { useDrag, useDrop } from 'react-dnd';
@@ -116,7 +117,7 @@ function NewItemButton() {
     <IconButton
       color="primary"
       edge="end"
-      onClick={() => addNewItem()}
+      onClick={() => void addNewItem()}
       sx={{ WebkitAppRegion: 'no-drag', cursor: 'default' }}
     >
       <Plus fontSize="small" />
@@ -173,7 +174,7 @@ function XListItem({ item, selected, onClick }: XListItemProps) {
 
     if (newName.length > 0) {
       if (item.name !== newName) {
-        updateItem(item.id, { name: newName });
+        void updateItem(item.id, { name: newName });
       }
 
       setEditMode(false);
@@ -367,11 +368,13 @@ function ItemRemoveButton({ item, ...props }: ItemRemoveButtonProps) {
 const EDITOR_HEADER_HEIGHT = APPBAR_HEIGHT;
 const EDITOR_FOOTER_HEIGHT = 30;
 
+type Editor = monaco.editor.IStandaloneCodeEditor;
+
 function ItemContentSection() {
   const xeate = useMainScreenXeate();
   const disposablesRef = React.useRef<{ dispose: () => void }[]>([]);
   const pendingContentRef = React.useRef<string>('');
-  const editorRef = React.useRef<any>();
+  const editorRef = React.useRef<Editor | null>(null);
   const updateItem = useUpdateItem();
   const editorTheme = useEditorTheme();
 
@@ -419,14 +422,14 @@ function ItemContentSection() {
 
     return () => {
       if (item?.id) {
-        updateItem(item.id, {
+        void updateItem(item.id, {
           state: editorRef.current.saveViewState(),
         });
       }
     };
   }, [item?.id]);
 
-  function handleEditorBeforeMount(monaco: any) {
+  function handleEditorBeforeMount(monaco: Monaco) {
     monaco.languages.typescript.javascriptDefaults.setCompilerOptions({
       target: monaco.languages.typescript.ScriptTarget.Latest,
       module: monaco.languages.typescript.ModuleKind.ES2015,
@@ -435,13 +438,13 @@ function ItemContentSection() {
     });
   }
 
-  function handleEditorMount(editor: any) {
+  function handleEditorMount(editor: Editor) {
     editorRef.current = editor;
 
     disposablesRef.current.push(
       // autosave when cursor position changes
-      editor.onDidChangeCursorPosition((data: any) => {
-        const lineCount = editor._modelData.model.getLineCount();
+      editor.onDidChangeCursorPosition((data) => {
+        const lineCount = editor.getModel().getLineCount();
         const position = data.position;
 
         // update editorState
@@ -455,7 +458,7 @@ function ItemContentSection() {
       })
     );
 
-    if (!!pendingContentRef.current) {
+    if (pendingContentRef.current) {
       editor.setValue(pendingContentRef.current);
       editor.restoreViewState(itemRef.current?.state || {});
       pendingContentRef.current = '';
@@ -520,14 +523,15 @@ function EditorHeader() {
       divider={<Divider height={16} color="grey.200" vertical />}
       flexShrink={0}
     >
-      <EditorToolbarItem />
-      <IconButton size="small" sx={{ ml: 'auto', WebkitAppRegion: 'no-drag' }}>
-        <PlusCircle fontSize="small" />
-      </IconButton>
+      {/* <EditorToolbarItem /> */}
+      {/* <IconButton size="small" sx={{ ml: 'auto', WebkitAppRegion: 'no-drag' }}> */}
+      {/*   <PlusCircle fontSize="small" /> */}
+      {/* </IconButton> */}
     </AppBarDelegate>
   );
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function EditorToolbarItem() {
   return (
     <Row
