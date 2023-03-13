@@ -1,12 +1,17 @@
+/* eslint-disable prefer-spread */
 import { ipcMain, IpcMainInvokeEvent } from 'electron';
 import ItemManager from './manager';
 
 class ItemManagerBridge {
   static init() {
-    ipcMain.handle('item', this.handleRequest);
+    ipcMain.handle('item', this.handleRequest.bind(null));
   }
 
-  private static handleRequest(_: IpcMainInvokeEvent, method: string, ...args: unknown[]): unknown {
+  private static handleRequest(
+    _: IpcMainInvokeEvent,
+    method: string,
+    ...args: unknown[]
+  ): unknown {
     const manager = ItemManager.getInstance();
 
     switch (method) {
@@ -29,4 +34,3 @@ class ItemManagerBridge {
 }
 
 export default ItemManagerBridge;
-

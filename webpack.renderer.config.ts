@@ -1,43 +1,46 @@
 import type { Configuration } from 'webpack';
 
-import { rules } from './webpack.rules';
-import { plugins, resolvePlugins } from './webpack.plugins';
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
-import path from 'path';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import MonacoWebpackPlugin from 'monaco-editor-webpack-plugin';
+import { plugins, resolvePlugins } from './webpack.plugins';
+import { rules } from './webpack.rules';
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
 rules.push({
   test: /\.(woff|woff2|svg)$/,
   sideEffects: true,
-  type: 'asset/resource'
+  type: 'asset/resource',
 });
 
 rules.push({
   test: /\.css$/,
   use: [
-    { 
+    {
       loader: MiniCssExtractPlugin.loader,
       options: {
-        publicPath: "../",
-      }
+        publicPath: '../',
+      },
     },
-    'css-loader' 
+    'css-loader',
   ],
 });
 
-plugins.push(new MiniCssExtractPlugin({
-  filename: 'assets/[name].css', 
-}));
+plugins.push(
+  new MiniCssExtractPlugin({
+    filename: 'assets/[name].css',
+  })
+);
 
 plugins.push(new MonacoWebpackPlugin());
 
 if (isDevelopment) {
-  plugins.push(new ReactRefreshWebpackPlugin({
-    esModule: true,
-  }));
+  plugins.push(
+    new ReactRefreshWebpackPlugin({
+      esModule: true,
+    })
+  );
 }
 
 export const rendererConfig: Configuration = {

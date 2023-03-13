@@ -1,4 +1,5 @@
 import { contextBridge, ipcRenderer } from 'electron';
+import { Item, UpdatableItem } from '~/shared/types';
 
 declare global {
   interface Window {
@@ -19,17 +20,17 @@ interface ItemApi {
   remove: (itemId: string) => Promise<void>;
 }
 
-const itemMethods: keyof ItemApi[] = [
-  'getAll',
-  'updateAll',
-  'new',
-  'update',
-  'getContent',
-  'remove',
+const itemMethods: (keyof ItemApi)[] = [
+  'getAll' as const,
+  'updateAll' as const,
+  'new' as const,
+  'update' as const,
+  'getContent' as const,
+  'remove' as const,
 ];
 
 const windowApi: WindowApi = {
-  item: itemMethods.reduce((acc, method) => {
+  item: itemMethods.reduce<any>((acc, method) => {
     return {
       ...acc,
       [method]: (...args: unknown[]) =>

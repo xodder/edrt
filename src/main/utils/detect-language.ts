@@ -22,7 +22,6 @@ const modelOperations = new ModelOperations({
   },
 });
 
-
 const toVerboseVersion: Record<string, string> = {
   js: 'javascript',
   ts: 'typescript',

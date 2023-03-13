@@ -56,7 +56,7 @@ function UpdateXeate(): JSX.Element {
       });
     }
 
-    if (itemCount === 0) init();
+    if (itemCount === 0) void init();
   }, [itemCount]);
 
   return null;
@@ -96,7 +96,7 @@ export function useUpdateItem() {
   return async (
     itemId: string,
     updates: Partial<Item>,
-    refreshState: boolean = true
+    refreshState = true
   ) => {
     await window.api.item.update(itemId, updates);
 

@@ -1,8 +1,6 @@
 import type { Configuration } from 'webpack';
-
-import { rules } from './webpack.rules';
 import { plugins, resolvePlugins } from './webpack.plugins';
-import path from 'path';
+import { rules } from './webpack.rules';
 
 export const mainConfig: Configuration = {
   /**
@@ -20,5 +18,5 @@ export const mainConfig: Configuration = {
   },
   plugins: [
     plugins[0], // DotEnv
-  ]
+  ],
 };

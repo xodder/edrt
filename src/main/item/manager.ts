@@ -120,7 +120,9 @@ class ItemManager {
     // delete actual file
     try {
       await fs.promises.unlink(item.filePath);
-    } catch (e) {}
+    } catch (e) {
+      //
+    }
   }
 }
 

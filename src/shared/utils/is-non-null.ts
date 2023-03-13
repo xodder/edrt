@@ -3,4 +3,3 @@ function isNonNull(value: unknown) {
 }
 
 export default isNonNull;
-

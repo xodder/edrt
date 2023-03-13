@@ -25,15 +25,15 @@ export const rules: Required<ModuleOptions>['rules'] = [
       loader: 'swc-loader',
       options: {
         jsc: {
-          target: "es2020",
+          target: 'es2020',
           transform: {
             react: {
               development: process.env.NODE_ENV !== 'production',
               refresh: process.env.NODE_ENV !== 'production',
-            }
-          }
+            },
+          },
         },
-      }
-    }
+      },
+    },
   },
 ];

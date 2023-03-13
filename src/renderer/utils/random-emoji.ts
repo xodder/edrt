@@ -14,8 +14,7 @@ const emojis = [
 }, []);
 
 function randomEmoji() {
-  return emojis[Math.round(Math.random() * emojis.length)]
+  return emojis[Math.round(Math.random() * emojis.length)];
 }
 
 export default randomEmoji;
-

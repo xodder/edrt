@@ -75,7 +75,7 @@ function notarizeMaybe() {
   }
 
   // Inject the notarization config if everything is right
-  config.packagerConfig!.osxNotarize = {
+  config.packagerConfig.osxNotarize = {
     tool: 'notarytool',
     appleId: process.env.APPLE_ID,
     appleIdPassword: process.env.APPLE_ID_PASSWORD,
@@ -83,7 +83,7 @@ function notarizeMaybe() {
   };
 
   // Also inject signing config
-  config.packagerConfig!.osxSign = {
+  config.packagerConfig.osxSign = {
     identity: 'Apple Development: odebiyistephen@gmail.com (L6F68FB49W)',
   };
 }

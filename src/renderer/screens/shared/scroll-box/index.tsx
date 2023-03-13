@@ -8,7 +8,7 @@ export type ScrollBoxProps = BoxProps & {
   shadows?: boolean | 'horizontal' | 'vertical';
   shadowTintColor?: string;
   barColor?: string;
-  scrollerProps?: BoxProps & SimpleBar.Props;
+  scrollerProps?: BoxProps & React.ComponentProps<typeof SimpleBar>;
 };
 
 function ScrollBox(
@@ -160,9 +160,7 @@ function useShadowGroupState(
 
     if (node) {
       const canShowStart =
-        orientation === 'horizontal'
-          ? node.scrollLeft > 0
-          : node.scrollTop > 0;
+        orientation === 'horizontal' ? node.scrollLeft > 0 : node.scrollTop > 0;
 
       const canShowEnd =
         orientation === 'horizontal'
