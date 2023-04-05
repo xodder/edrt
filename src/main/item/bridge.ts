@@ -4,10 +4,11 @@ import ItemManager from './manager';
 
 class ItemManagerBridge {
   static init() {
-    ipcMain.handle('item', this.handleRequest.bind(null));
+    ipcMain.handle('item', ItemManagerBridge.handleRequest);
   }
 
   private static handleRequest(
+    this: void,
     _: IpcMainInvokeEvent,
     method: string,
     ...args: unknown[]
