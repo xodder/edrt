@@ -9,6 +9,8 @@ export type Item = {
 };
 
 export type UpdatableItem = {
+  name?: string;
   content?: string;
   language?: string;
+  state?: any;
 };

@@ -1,6 +1,6 @@
 import * as monaco from 'monaco-editor/esm/vs/editor/editor.api';
 import React from 'react';
-import { Item } from '~/shared/types';
+import { Item, UpdatableItem } from '~/shared/types';
 import { makeXeate } from '~/renderer/utils/xeate';
 
 type MainScreenProviderProps = React.PropsWithChildren<unknown>;
@@ -95,7 +95,7 @@ export function useUpdateItem() {
 
   return async (
     itemId: string,
-    updates: Partial<Item>,
+    updates: UpdatableItem,
     refreshState = true
   ) => {
     await window.api.item.update(itemId, updates);
